@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import { useSesion } from '../context/SesionContext'
 import './Compannero.css'
 
@@ -101,6 +101,11 @@ function playSound(type) {
 export default function Compannero({ expresion = 'normal', mensaje, tamano = 'normal' }) {
   const { pantalla, PANTALLAS } = useSesion()
   const esInicio = pantalla === PANTALLAS.INICIO
+
+  // --- PREVENIR MASCOTA DUPLICADA EN LA PANTALLA DE INICIO ---
+  // Si estamos en el inicio, el compañero flotante de App.jsx (tamano === 'normal') se oculta, 
+  // dejando solo el compañero grande de la grilla principal.
+  if (esInicio && tamano !== 'grande') return null
 
   // --- ESTADOS DE PERSONALIZACIÓN (Persistidos) ---
   const [skinColor, setSkinColor] = useState(() => localStorage.getItem('isla-color') || 'green')
@@ -276,13 +281,40 @@ export default function Compannero({ expresion = 'normal', mensaje, tamano = 'no
             <path className="body-shape" d="M150,70 C215,70 245,115 245,175 C245,225 205,245 150,245 C95,245 55,225 55,175 C55,115 85,70 150,70 Z" fill="url(#isla-body-gradient)" />
             <path d="M150,70 C215,70 245,115 245,175 C245,225 205,245 150,245 C95,245 55,225 55,175 C55,115 85,70 150,70 Z" fill="url(#isla-body-shadow)" />
 
+            {/* Túnica Blanca Uruguaya con Moña Azul */}
+            <g className="uruguayan-tunic-group">
+              {/* Túnica Blanca */}
+              <path 
+                className="tunic-white" 
+                d="M57,180 C57,222 95,245 150,245 C205,245 243,222 243,180 C210,185 190,187 150,187 C110,187 90,185 57,180 Z" 
+                fill="#ffffff" 
+                stroke="#94a3b8" 
+                strokeWidth="3" 
+              />
+              {/* Pliegues de la túnica */}
+              <path d="M125,195 L125,236" stroke="#cbd5e1" strokeWidth="2" strokeLinecap="round" />
+              <path d="M175,195 L175,236" stroke="#cbd5e1" strokeWidth="2" strokeLinecap="round" />
+              
+              {/* Moña Azul Uruguaya */}
+              <g className="blue-bow">
+                {/* Colas de la moña */}
+                <path d="M145,190 L130,223 L144,225 L150,195 Z" fill="#1e3a8a" />
+                <path d="M155,190 L170,223 L156,225 L150,195 Z" fill="#1e3a8a" />
+                {/* Lazos de la moña (loops) */}
+                <path d="M146,188 C125,170 115,185 115,200 C115,213 135,205 146,192 Z" fill="#2563eb" stroke="#1e3a8a" strokeWidth="1.5" />
+                <path d="M154,188 C175,170 185,185 185,200 C185,213 165,205 154,192 Z" fill="#2563eb" stroke="#1e3a8a" strokeWidth="1.5" />
+                {/* Nudo central */}
+                <rect x="142" y="182" width="16" height="12" rx="4" fill="#1d4ed8" stroke="#1e3a8a" strokeWidth="2" />
+              </g>
+            </g>
+
             {/* Rostro */}
             <g className="face-group">
               <circle cx="98" cy="172" r="12" fill="#ff8fa3" opacity="0.6" />
               <circle cx="202" cy="172" r="12" fill="#ff8fa3" opacity="0.6" />
 
               {/* OJO IZQUIERDO */}
-              <g class="eye-group eye-left">
+              <g className="eye-group eye-left">
                 <g className="eye-open">
                   <ellipse cx="115" cy="150" rx="18" ry="22" fill="#1e293b" />
                   <circle cx="110" cy="142" r="6" fill="#ffffff" />
@@ -293,7 +325,7 @@ export default function Compannero({ expresion = 'normal', mensaje, tamano = 'no
               </g>
 
               {/* OJO DERECHO */}
-              <g class="eye-group eye-right">
+              <g className="eye-group eye-right">
                 <g className="eye-open">
                   <ellipse cx="185" cy="150" rx="18" ry="22" fill="#1e293b" />
                   <circle cx="180" cy="142" r="6" fill="#ffffff" />
@@ -345,7 +377,7 @@ export default function Compannero({ expresion = 'normal', mensaje, tamano = 'no
       {/* PANEL DE PERSONALIZACIÓN (Solo en la pantalla de inicio) */}
       {esInicio && (
         <div className="customizer-card">
-          <h2 className="customizer-title">Viste y personaliza a ISLA</h2>
+          <h2 class="customizer-title">Viste y personaliza a ISLA</h2>
           
           <div className="control-group">
             <span className="control-label">Color de ISLA:</span>
@@ -366,7 +398,7 @@ export default function Compannero({ expresion = 'normal', mensaje, tamano = 'no
           </div>
 
           <div className="control-group">
-            <span class="control-label">Accesorios de cabeza:</span>
+            <span className="control-label">Accesorios de cabeza:</span>
             <div className="accessory-options">
               <button 
                 className={`accessory-btn ${hat === 'none' ? 'active' : ''}`}
