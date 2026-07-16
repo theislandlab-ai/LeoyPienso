@@ -4,7 +4,7 @@ export default {
     subtitle: 'Aprendé a entender mejor lo que leés',
   },
   inicio: {
-    titulo: '¡Hola! Soy Lumi, tu compañero de lectura',
+    titulo: '¡Hola! Soy ISLA, tu compañero de lectura',
     descripcion: 'Vamos a leer juntos y a pensar sobre lo que leemos. ¿Empezamos?',
     boton_empezar: '¡Empezar!',
     nivel_exploradores: 'Exploradores',
@@ -78,7 +78,7 @@ export default {
     audio: 'Audio',
   },
   companero: {
-    saludo: '¡Hola! Soy Lumi, tu búho amigo. Te voy a acompañar a leer.',
+    saludo: '¡Hola! Soy ISLA, tu asistente de lectura. Te voy a acompañar a leer.',
     pensando: 'Mmm, déjame pensar...',
     animando: '¡Muy bien!',
     esperando: 'Tomate tu tiempo para responder',

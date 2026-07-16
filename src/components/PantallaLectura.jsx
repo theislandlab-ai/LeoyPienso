@@ -69,15 +69,11 @@ export default function PantallaLectura() {
   const segmento = texto?.segmentos?.[segmentoActual]
   const esUltimo = segmentoActual === (texto?.segmentos?.length || 1) - 1
   const pausaVista = useRef(false)
-  const [primeraVez, setPrimeraVez] = useState(true)
 
   useEffect(() => {
     if (!segmento) return
     pausaVista.current = false
-    if (primeraVez) {
-      setPrimeraVez(false)
-    }
-  }, [segmentoActual, segmento, primeraVez])
+  }, [segmentoActual, segmento])
 
   const handleClickContinuar = useCallback(() => {
     if (enPausa) {

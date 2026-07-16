@@ -16,7 +16,7 @@
   bottom: 1rem;
   right: 1rem;
   z-index: 50;
-  max-width: 280px;
+  max-width: 300px;
 }
 
 .compannero-avatar {
@@ -24,12 +24,21 @@
   animation: bounce 2s ease-in-out infinite;
 }
 
+.compannero-flotante .compannero-avatar {
+  animation: pointBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes pointBounce {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-8px) rotate(2deg); }
+}
+
 .compannero-burbuja {
   background: var(--color-surface);
-  border: 2px solid var(--color-primary-light);
+  border: 2px solid var(--color-primary);
   border-radius: var(--radius);
   padding: 0.75rem 1rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lg);
   position: relative;
   font-size: 0.9rem;
   line-height: 1.5;
@@ -42,7 +51,7 @@
   top: 50%;
   transform: translateY(-50%);
   border: 8px solid transparent;
-  border-right-color: var(--color-primary-light);
+  border-right-color: var(--color-primary);
 }
 
 .compannero-burbuja p {

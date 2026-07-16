@@ -1,5 +1,3 @@
-const CONTENT_BASE = '/content/es/'
-
 const TEXT_INDEX = [
   'expl-001', 'expl-002', 'expl-003', 'expl-004', 'expl-005',
   'expl-006', 'expl-007', 'expl-008', 'expl-009', 'expl-010',
@@ -9,7 +7,8 @@ const TEXT_INDEX = [
 ]
 
 export async function cargarTexto(id) {
-  const resp = await fetch(`${CONTENT_BASE}${id}.json`)
+  const base = import.meta.env.BASE_URL || '/'
+  const resp = await fetch(`${base}content/es/${id}.json`)
   if (!resp.ok) throw new Error(`No se pudo cargar el texto: ${id}`)
   return resp.json()
 }
