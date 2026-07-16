@@ -1,164 +1,408 @@
+import { useState, useEffect, useCallback } from 'react'
 import { useSesion } from '../context/SesionContext'
 import './Compannero.css'
 
-const EXPRESIONES = {
-  normal: {
-    color_tunic: '#4F46E5',
-    color_accent: '#818CF8',
-    blush: '#FBCFE8',
-    mouth_d: 'M 38 54 Q 43 58 48 54 Q 53 58 58 54',
-    brow_l: 'M 32 28 Q 36 25 42 27',
-    brow_r: 'M 58 27 Q 64 25 68 28',
-    eye_hl: 'M 37 31 a 2 2 0 1 1 4 0',
-    eye_hr: 'M 59 31 a 2 2 0 1 1 4 0',
+// --- FRASES DIVERTIDAS EN ESPAÑOL ---
+const PHRASES = [
+  "¡Hola! ¿Listo para sumergirte en una divertida aventura lectora? 📚",
+  "¡Tu cerebro crece cada vez que lees un libro! ¡Sigue así! 🧠✨",
+  "¡Eres súper inteligente! Me encanta leer contigo. ❤️",
+  "¡Increíble! Cada palabra nueva es un superpoder para tu mente. ⚡",
+  "¿Sabías que los libros pueden llevarte a mundos mágicos? 🧚‍♀️🧙‍♂️",
+  "¡Me encanta el color que elegiste para mí! ¡Me veo genial! 🎨",
+  "¡Wow! ¡Tus accesorios me quedan espectaculares! 🎩🕶️",
+  "¡Cualquier momento es perfecto para abrir un libro y soñar! 🌟",
+  "¡Qué bien lees! ¡Eres todo un explorador de historias! 🧭",
+  "¡Choca esos cinco! ✋ ¡Sigamos leyendo juntos!"
+];
+
+const COLOR_THEMES = {
+  green: {
+    stop1: "#4ade80", stop2: "#059669",
+    stroke: "#059669", accent: "#047857"
   },
-  feliz: {
-    color_tunic: '#10B981',
-    color_accent: '#34D399',
-    blush: '#FCE7F3',
-    mouth_d: 'M 35 50 Q 43 62 51 50 Q 57 60 65 50',
-    brow_l: 'M 32 26 Q 36 23 42 25',
-    brow_r: 'M 58 25 Q 64 23 68 26',
-    eye_hl: 'M 37 30 a 2 2 0 1 1 4 0',
-    eye_hr: 'M 59 30 a 2 2 0 1 1 4 0',
+  purple: {
+    stop1: "#c084fc", stop2: "#7c3aed",
+    stroke: "#7c3aed", accent: "#6d28d9"
   },
-  pensativo: {
-    color_tunic: '#F59E0B',
-    color_accent: '#FBBF24',
-    blush: '#FEF3C7',
-    mouth_d: 'M 40 58 Q 47 54 56 58',
-    brow_l: 'M 33 32 Q 38 34 42 32',
-    brow_r: 'M 58 29 Q 64 27 68 30',
-    eye_hl: 'M 37 34 a 2 2 0 1 1 4 0',
-    eye_hr: 'M 59 31 a 2 2 0 1 1 4 0',
+  blue: {
+    stop1: "#60a5fa", stop2: "#2563eb",
+    stroke: "#2563eb", accent: "#1d4ed8"
   },
-  preocupado: {
-    color_tunic: '#EF4444',
-    color_accent: '#F87171',
-    blush: '#FEE2E2',
-    mouth_d: 'M 38 60 Q 47 56 58 60',
-    brow_l: 'M 32 32 Q 36 35 42 33',
-    brow_r: 'M 58 33 Q 64 35 68 32',
-    eye_hl: 'M 37 35 a 2 2 0 1 1 4 0',
-    eye_hr: 'M 59 35 a 2 2 0 1 1 4 0',
+  pink: {
+    stop1: "#f472b6", stop2: "#db2777",
+    stroke: "#db2777", accent: "#be185d"
   },
-  animando: {
-    color_tunic: '#8B5CF6',
-    color_accent: '#A78BFA',
-    blush: '#EDE9FE',
-    mouth_d: 'M 33 48 Q 43 64 53 48 Q 59 60 67 48',
-    brow_l: 'M 32 24 Q 36 21 42 23',
-    brow_r: 'M 58 23 Q 64 21 68 24',
-    eye_hl: 'M 37 28 a 2 2 0 1 1 4 0',
-    eye_hr: 'M 59 28 a 2 2 0 1 1 4 0',
-  },
+  orange: {
+    stop1: "#fb923c", stop2: "#ea580c",
+    stroke: "#ea580c", accent: "#c2410c"
+  }
+};
+
+// --- SINTETIZADOR DE AUDIO (Web Audio API) ---
+let audioCtx = null;
+function playSound(type) {
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    }
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume();
+    }
+    const now = audioCtx.currentTime;
+    
+    if (type === 'click') {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(320, now);
+      osc.frequency.exponentialRampToValueAtTime(750, now + 0.15);
+      gain.gain.setValueAtTime(0.12, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.18);
+      osc.start(now);
+      osc.stop(now + 0.18);
+    } 
+    else if (type === 'dress') {
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.type = 'triangle';
+      osc.frequency.setValueAtTime(520, now);
+      osc.frequency.setValueAtTime(650, now + 0.05);
+      osc.frequency.setValueAtTime(880, now + 0.1);
+      gain.gain.setValueAtTime(0.08, now);
+      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.22);
+      osc.start(now);
+      osc.stop(now + 0.22);
+    } 
+    else if (type === 'success') {
+      const notes = [261.63, 329.63, 392.00, 523.25];
+      notes.forEach((freq, idx) => {
+        const oscNode = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+        oscNode.type = 'sine';
+        oscNode.frequency.setValueAtTime(freq, now + idx * 0.08);
+        oscNode.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+        gainNode.gain.setValueAtTime(0.1, now + idx * 0.08);
+        gainNode.gain.exponentialRampToValueAtTime(0.01, now + idx * 0.08 + 0.2);
+        oscNode.start(now + idx * 0.08);
+        oscNode.stop(now + idx * 0.08 + 0.25);
+      });
+    }
+  } catch (e) {
+    console.warn("AudioContext error", e);
+  }
 }
 
 export default function Compannero({ expresion = 'normal', mensaje, tamano = 'normal' }) {
   const { pantalla, PANTALLAS } = useSesion()
   const esInicio = pantalla === PANTALLAS.INICIO
-  if (!esInicio && !mensaje) return null
 
-  const expr = EXPRESIONES[expresion] || EXPRESIONES.normal
-  const size = tamano === 'grande' ? 240 : 120
-  const s = tamano === 'grande' ? 1.0 : 0.5
+  // --- ESTADOS DE PERSONALIZACIÓN (Persistidos) ---
+  const [skinColor, setSkinColor] = useState(() => localStorage.getItem('isla-color') || 'green')
+  const [hat, setHat] = useState(() => localStorage.getItem('isla-hat') || 'none')
+  const [hasGlasses, setHasGlasses] = useState(() => localStorage.getItem('isla-glasses') === 'true')
+
+  // --- ESTADOS DE ANIMACIÓN ---
+  const [isHappy, setIsHappy] = useState(false)
+  const [isSpinning, setIsSpinning] = useState(false)
+  const [currentMessage, setCurrentMessage] = useState(mensaje)
+  const [bubblePop, setBubblePop] = useState(false)
+
+  // Sincronizar mensaje externo
+  useEffect(() => {
+    setCurrentMessage(mensaje)
+  }, [mensaje])
+
+  // Reaccionar a expresiones felices o de animación externas (ej. respuestas correctas)
+  useEffect(() => {
+    if (expresion === 'feliz' || expresion === 'animando') {
+      setIsHappy(true)
+      playSound('success')
+      const timer = setTimeout(() => setIsHappy(false), 2500)
+      return () => clearTimeout(timer)
+    }
+  }, [expresion])
+
+  // Ocultar si no estamos en inicio y no hay mensaje
+  if (!esInicio && !currentMessage) return null
+
+  const size = tamano === 'grande' ? '260px' : '135px'
+  const theme = COLOR_THEMES[skinColor] || COLOR_THEMES.green
+
+  // --- MANEJADORES ---
+  const handleMascotClick = () => {
+    playSound('click')
+    
+    // Activar giro
+    setIsSpinning(true)
+    
+    // Activar cara feliz temporal
+    setIsHappy(true)
+    
+    // Cambiar frase en burbuja
+    const randIdx = Math.floor(Math.random() * PHRASES.length)
+    setCurrentMessage(PHRASES[randIdx])
+    
+    // Re-activar rebote de burbuja
+    setBubblePop(true)
+    setTimeout(() => setBubblePop(false), 400)
+    
+    setTimeout(() => {
+      setIsHappy(false)
+    }, 1800)
+  }
+
+  const handleColorChange = (color) => {
+    setSkinColor(color)
+    localStorage.setItem('isla-color', color)
+    playSound('dress')
+    setCurrentMessage("¡Me encanta este nuevo color! ¿A que me veo genial? 🤩")
+    setBubblePop(true)
+    setTimeout(() => setBubblePop(false), 400)
+  }
+
+  const handleHatChange = (newHat) => {
+    setHat(newHat)
+    localStorage.setItem('isla-hat', newHat)
+    playSound('dress')
+    if (newHat === 'explorer') {
+      setCurrentMessage("¡Listo para buscar palabras perdidas! 🤠🔎")
+    } else if (newHat === 'wizard') {
+      setCurrentMessage("¡ABRACADABRA! ¡Que aparezcan nuevos cuentos! 🧙‍♂️✨")
+    } else {
+      setCurrentMessage("¡Volví a mi estado natural, me siento libre! 😊")
+    }
+    setBubblePop(true)
+    setTimeout(() => setBubblePop(false), 400)
+  }
+
+  const handleGlassesToggle = () => {
+    const nextVal = !hasGlasses
+    setHasGlasses(nextVal)
+    localStorage.setItem('isla-glasses', String(nextVal))
+    playSound('dress')
+    if (nextVal) {
+      setCurrentMessage("¡Ahora puedo leer letras de todos los tamaños! 🤓👓")
+    } else {
+      setCurrentMessage("¡Listo, guardé mis lentes de lectura!")
+    }
+    setBubblePop(true)
+    setTimeout(() => setBubblePop(false), 400)
+  }
+
+  // Clases CSS dinámicas para la mascota
+  const mascotClasses = [
+    'mascot-container',
+    isHappy ? 'happy' : '',
+    isSpinning ? 'spin-anim' : '',
+    hasGlasses ? 'has-glasses' : '',
+    hat === 'explorer' ? 'has-explorer-hat' : '',
+    hat === 'wizard' ? 'has-wizard-hat' : ''
+  ].join(' ').trim()
 
   return (
-    <div className={`compannero ${esInicio ? 'compannero-inicio' : 'compannero-flotante'}`}>
-      <div className="compannero-avatar">
-        <svg width={size} height={size} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-          {/* Sombra suave */}
-          <ellipse cx="50" cy="86" rx="20" ry="4" fill="#00000010" />
+    <div className={`compannero-wrapper ${esInicio ? 'compannero-inicio-wrapper' : 'compannero-flotante-wrapper'}`}>
+      
+      {/* Burbuja de Diálogo de ISLA */}
+      {currentMessage && (
+        <div className="speech-bubble-container">
+          <div className={`speech-bubble ${bubblePop ? 'bubble-pop' : ''}`}>
+            {currentMessage}
+          </div>
+        </div>
+      )}
 
-          {/* Piernas */}
-          <rect x="36" y="76" width="8" height="8" rx="4" fill={expr.color_tunic} opacity="0.6" />
-          <rect x="56" y="76" width="8" height="8" rx="4" fill={expr.color_tunic} opacity="0.6" />
-          {/* Zapatos */}
-          <ellipse cx="40" cy="85" rx="6" ry="3" fill={expr.color_tunic} opacity="0.8" />
-          <ellipse cx="60" cy="85" rx="6" ry="3" fill={expr.color_tunic} opacity="0.8" />
+      {/* Contenedor del Personaje SVG Animado */}
+      <div 
+        className={mascotClasses}
+        onClick={handleMascotClick}
+        onAnimationEnd={() => setIsSpinning(false)}
+        role="button"
+        tabIndex="0"
+        aria-label="Mascota interactiva ISLA"
+        style={{ '--mascot-size': size }}
+      >
+        <svg className="isla-svg" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="isla-body-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor={theme.stop1} />
+              <stop offset="100%" stopColor={theme.stop2} />
+            </linearGradient>
+            <radialGradient id="isla-body-shadow" cx="50%" cy="40%" r="50%">
+              <stop offset="0%" stopColor="rgba(255,255,255,0.4)" />
+              <stop offset="70%" stopColor="rgba(0,0,0,0)" />
+              <stop offset="100%" stopColor="rgba(0,0,0,0.15)" />
+            </radialGradient>
+          </defs>
 
-          {/* Cuerpo - Túnica escolar */}
-          <path d="M 30 40 Q 30 38 32 36 L 38 32 Q 40 30 42 30 L 58 30 Q 60 30 62 32 L 68 36 Q 70 38 70 40 L 72 72 Q 72 76 68 76 L 32 76 Q 28 76 28 72 Z" fill="white" stroke={expr.color_tunic} strokeWidth="2" />
-          
-          {/* Cuello de la túnica */}
-          <path d="M 38 32 Q 40 36 42 34 L 50 33 L 58 34 Q 60 36 62 32" fill="white" stroke={expr.color_tunic} strokeWidth="1.5" />
-          
-          {/* Solapa izquierda de la túnica */}
-          <path d="M 38 32 Q 40 38 42 34 L 46 40 L 44 48 L 40 44 Q 36 40 38 32" fill={expr.color_tunic} opacity="0.1" stroke={expr.color_tunic} strokeWidth="1" />
-          
-          {/* Botones de la túnica */}
-          <circle cx="50" cy="42" r="2.5" fill={expr.color_accent} />
-          <circle cx="50" cy="52" r="2.5" fill={expr.color_accent} />
-          <circle cx="50" cy="62" r="2.5" fill={expr.color_accent} />
+          {/* Sombra de Base Flotante */}
+          <ellipse className="mascot-shadow" cx="150" cy="275" rx="60" ry="12" />
 
-          {/* Brazos */}
-          {/* Brazo izquierdo (señalando/animando) */}
-          <path d="M 30 42 Q 18 45 12 38" stroke={expr.color_tunic} strokeWidth="5" strokeLinecap="round" fill="none" />
-          {/* Mano izquierda señalando */}
-          <circle cx="12" cy="38" r="4" fill="#FFE4C4" />
-          <path d="M 10 36 L 6 28" stroke="#FFE4C4" strokeWidth="3" strokeLinecap="round" />
-          <path d="M 8 29 L 5 26" stroke="#FFE4C4" strokeWidth="2.5" strokeLinecap="round" />
-          
-          {/* Brazo derecho */}
-          <path d="M 70 42 Q 82 50 86 58" stroke={expr.color_tunic} strokeWidth="5" strokeLinecap="round" fill="none" />
-          {/* Mano derecha */}
-          <circle cx="86" cy="58" r="4" fill="#FFE4C4" />
+          {/* Cuerpo Principal de ISLA */}
+          <g className="mascot-body-group">
+            
+            {/* Antena y su luz */}
+            <g className="antenna-group">
+              <path d="M150,75 Q150,40 170,32" fill="none" stroke="#334155" strokeWidth="6" strokeLinecap="round" />
+              <circle className="antenna-light" cx="172" cy="28" r="10" fill="#facc15" />
+            </g>
 
-          {/* Cabeza */}
-          <circle cx="50" cy="20" r="16" fill="#FFE4C4" stroke={expr.color_tunic} strokeWidth="2" />
+            {/* Brazos */}
+            <path className="arm-left" d="M75,170 Q40,165 25,185" fill="none" stroke={theme.stroke} strokeWidth="12" strokeLinecap="round" />
+            <g className="arm-right-group">
+              <path className="arm-right" d="M225,170 Q255,165 270,185" fill="none" stroke={theme.stroke} strokeWidth="12" strokeLinecap="round" />
+              <g className="magic-pencil" transform="translate(262, 172) rotate(15)">
+                <path d="M0,0 L8,24 L16,24 L24,0 Z" fill="#f59e0b" />
+                <polygon points="8,24 12,32 16,24" fill="#fecdd3" />
+                <circle cx="12" cy="32" r="2.5" fill="#f43f5e" />
+                <rect x="3" y="0" width="18" height="6" fill="#3b82f6" rx="1" />
+              </g>
+            </g>
 
-          {/* Cabello - flequillo */}
-          <path d="M 34 16 Q 36 6 42 8 Q 46 2 50 6 Q 54 2 58 8 Q 64 6 66 16" fill={expr.color_tunic} opacity="0.8" />
-          <path d="M 36 14 Q 40 8 44 10 Q 48 5 52 10 Q 56 8 64 14" fill={expr.color_accent} opacity="0.5" />
+            {/* Piernas y Pies */}
+            <g className="legs-group">
+              <rect x="110" y="225" width="14" height="25" rx="7" fill={theme.accent} />
+              <ellipse cx="117" cy="252" rx="12" ry="7" fill="#334155" />
+              <rect x="176" y="225" width="14" height="25" rx="7" fill={theme.accent} />
+              <ellipse cx="183" cy="252" rx="12" ry="7" fill="#334155" />
+            </g>
 
-          {/* Moño/coleta en la cabeza */}
-          <circle cx="50" cy="4" r="5" fill={expr.color_accent} />
-          <path d="M 46 2 Q 48 -2 50 0 Q 52 -2 54 2" fill={expr.color_tunic} opacity="0.6" />
+            {/* Forma del Cuerpo */}
+            <path className="body-shape" d="M150,70 C215,70 245,115 245,175 C245,225 205,245 150,245 C95,245 55,225 55,175 C55,115 85,70 150,70 Z" fill="url(#isla-body-gradient)" />
+            <path d="M150,70 C215,70 245,115 245,175 C245,225 205,245 150,245 C95,245 55,225 55,175 C55,115 85,70 150,70 Z" fill="url(#isla-body-shadow)" />
 
-          {/* Ojos grandes y expresivos */}
-          <ellipse cx="38" cy="20" rx="6" ry="7" fill="white" stroke={expr.color_tunic} strokeWidth="1.5" />
-          <ellipse cx="62" cy="20" rx="6" ry="7" fill="white" stroke={expr.color_tunic} strokeWidth="1.5" />
-          
-          {/* Iris */}
-          <circle cx="40" cy="20" r="4" fill={expr.color_tunic} />
-          <circle cx="64" cy="20" r="4" fill={expr.color_tunic} />
-          
-          {/* Brillo de ojos (pupila) */}
-          <circle cx="38" cy="18" r="2" fill="white" />
-          <circle cx="62" cy="18" r="2" fill="white" />
-          <circle cx={expr.eye_hl.includes('37') ? 41 : 39} cy={expr.eye_hl.includes('31') ? 22 : 20} r="1.2" fill="white" opacity="0.7" />
-          <circle cx={expr.eye_hr.includes('59') ? 65 : 63} cy={expr.eye_hr.includes('31') ? 22 : 20} r="1.2" fill="white" opacity="0.7" />
+            {/* Rostro */}
+            <g className="face-group">
+              <circle cx="98" cy="172" r="12" fill="#ff8fa3" opacity="0.6" />
+              <circle cx="202" cy="172" r="12" fill="#ff8fa3" opacity="0.6" />
 
-          {/* Cejas */}
-          <path d={expr.brow_l} stroke={expr.color_tunic} strokeWidth="1.8" fill="none" strokeLinecap="round" />
-          <path d={expr.brow_r} stroke={expr.color_tunic} strokeWidth="1.8" fill="none" strokeLinecap="round" />
+              {/* OJO IZQUIERDO */}
+              <g class="eye-group eye-left">
+                <g className="eye-open">
+                  <ellipse cx="115" cy="150" rx="18" ry="22" fill="#1e293b" />
+                  <circle cx="110" cy="142" r="6" fill="#ffffff" />
+                  <circle cx="121" cy="156" r="3.5" fill="#ffffff" />
+                </g>
+                <path className="eye-closed" d="M98,150 Q115,162 132,150" fill="none" stroke="#1e293b" strokeWidth="5" strokeLinecap="round" />
+                <path className="eye-star" d="M115,134 L119,143 L129,144 L121,151 L123,161 L115,156 L107,161 L109,151 L101,144 L111,143 Z" fill="#facc15" />
+              </g>
 
-          {/* Mejillas sonrojadas */}
-          <ellipse cx="30" cy="24" rx="4" ry="3" fill={expr.blush} opacity="0.8" />
-          <ellipse cx="70" cy="24" rx="4" ry="3" fill={expr.blush} opacity="0.8" />
+              {/* OJO DERECHO */}
+              <g class="eye-group eye-right">
+                <g className="eye-open">
+                  <ellipse cx="185" cy="150" rx="18" ry="22" fill="#1e293b" />
+                  <circle cx="180" cy="142" r="6" fill="#ffffff" />
+                  <circle cx="191" cy="156" r="3.5" fill="#ffffff" />
+                </g>
+                <path className="eye-closed" d="M168,150 Q185,162 202,150" fill="none" stroke="#1e293b" strokeWidth="5" strokeLinecap="round" />
+                <path className="eye-star" d="M185,134 L189,143 L199,144 L191,151 L193,161 L185,156 L177,161 L179,151 L171,144 L181,143 Z" fill="#facc15" />
+              </g>
 
-          {/* Boca - sonrisa */}
-          <path d={expr.mouth_d} stroke={expr.color_tunic} strokeWidth="2" fill="none" strokeLinecap="round" />
+              <path className="mouth-smile" d="M140,178 Q150,188 160,178" fill="none" stroke="#1e293b" strokeWidth="4.5" strokeLinecap="round" />
+              <path className="mouth-happy" d="M138,178 Q150,202 162,178 Z" fill="#ef4444" stroke="#1e293b" strokeWidth="3" />
+            </g>
 
-          {/* Lunares/pecas (opcional, da ternura) */}
-          <circle cx="35" cy="27" r="0.8" fill={expr.color_tunic} opacity="0.2" />
-          <circle cx="38" cy="28" r="0.8" fill={expr.color_tunic} opacity="0.2" />
-          <circle cx="62" cy="28" r="0.8" fill={expr.color_tunic} opacity="0.2" />
-          <circle cx="65" cy="27" r="0.8" fill={expr.color_tunic} opacity="0.2" />
+            {/* ACCESORIOS */}
+            <g className="accessory-glasses">
+              <circle cx="115" cy="150" r="25" fill="none" stroke="#ea580c" strokeWidth="5.5" />
+              <circle cx="185" cy="150" r="25" fill="none" stroke="#ea580c" strokeWidth="5.5" />
+              <path d="M140,150 L160,150" stroke="#ea580c" strokeWidth="5.5" strokeLinecap="round" />
+              <path d="M90,150 Q75,145 70,155" fill="none" stroke="#ea580c" strokeWidth="4" strokeLinecap="round" />
+              <path d="M210,150 Q225,145 230,155" fill="none" stroke="#ea580c" strokeWidth="4" strokeLinecap="round" />
+            </g>
+
+            <g className="accessory-explorer-hat">
+              <path d="M90,75 C90,30 210,30 210,75 Z" fill="#d97706" stroke="#78350f" strokeWidth="3.5" />
+              <path d="M90,67 C110,63 190,63 210,67 L210,75 C190,71 110,71 90,75 Z" fill="#15803d" />
+              <path d="M60,75 C60,70 240,70 240,75 C240,84 60,84 60,75 Z" fill="#b45309" stroke="#78350f" strokeWidth="3.5" />
+              <path d="M185,55 Q205,30 210,25 Q195,45 190,52 Z" fill="#ef4444" />
+            </g>
+
+            <g className="accessory-wizard-hat">
+              <path d="M100,72 L150,5 L200,72 Z" fill="#1e3a8a" stroke="#172554" strokeWidth="3.5" />
+              <ellipse cx="150" cy="74" rx="65" ry="10" fill="#1d4ed8" stroke="#172554" strokeWidth="3.5" />
+              <polygon points="150,22 152,27 157,27 153,30 155,35 150,32 145,35 147,30 143,27 148,27" fill="#facc15" />
+              <polygon points="132,45 133,48 137,48 134,50 135,54 132,52 129,54 130,50 127,48 131,48" fill="#facc15" />
+              <polygon points="168,45 169,48 173,48 170,50 171,54 168,52 165,54 166,50 163,48 167,48" fill="#facc15" />
+            </g>
+
+          </g>
 
           {/* Nombre ISLA */}
           {esInicio && (
-            <text x="50" y="96" textAnchor="middle" fill={expr.color_tunic} fontSize="11" fontWeight="800" fontFamily="sans-serif" letterSpacing="2">
+            <text x="150" y="295" textAnchor="middle" fill={theme.stroke} fontSize="16" fontWeight="900" letterSpacing="3" fontFamily="sans-serif">
               ISLA
             </text>
           )}
         </svg>
       </div>
-      {mensaje && (
-        <div className="compannero-burbuja animar-entrada">
-          <p>{mensaje}</p>
+
+      {/* PANEL DE PERSONALIZACIÓN (Solo en la pantalla de inicio) */}
+      {esInicio && (
+        <div className="customizer-card">
+          <h2 className="customizer-title">Viste y personaliza a ISLA</h2>
+          
+          <div className="control-group">
+            <span className="control-label">Color de ISLA:</span>
+            <div className="color-options">
+              {Object.keys(COLOR_THEMES).map((color) => {
+                const colors = COLOR_THEMES[color];
+                return (
+                  <button 
+                    key={color}
+                    className={`color-btn ${skinColor === color ? 'active' : ''}`}
+                    onClick={() => handleColorChange(color)}
+                    aria-label={`Color ${color}`}
+                    style={{ background: `linear-gradient(135deg, ${colors.stop1}, ${colors.stop2})` }}
+                  />
+                )
+              })}
+            </div>
+          </div>
+
+          <div className="control-group">
+            <span class="control-label">Accesorios de cabeza:</span>
+            <div className="accessory-options">
+              <button 
+                className={`accessory-btn ${hat === 'none' ? 'active' : ''}`}
+                onClick={() => handleHatChange('none')}
+              >
+                Ninguno
+              </button>
+              <button 
+                className={`accessory-btn ${hat === 'explorer' ? 'active' : ''}`}
+                onClick={() => handleHatChange('explorer')}
+              >
+                Explorador
+              </button>
+              <button 
+                className={`accessory-btn ${hat === 'wizard' ? 'active' : ''}`}
+                onClick={() => handleHatChange('wizard')}
+              >
+                Mago
+              </button>
+            </div>
+          </div>
+
+          <div className="control-group">
+            <span className="control-label">Complementos:</span>
+            <div className="accessory-options">
+              <button 
+                className={`accessory-btn toggle-btn ${hasGlasses ? 'active' : ''}`}
+                onClick={handleGlassesToggle}
+              >
+                {hasGlasses ? 'Quitar Lentes' : 'Usar Lentes'}
+              </button>
+            </div>
+          </div>
         </div>
       )}
+
     </div>
   )
 }

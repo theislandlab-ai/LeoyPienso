@@ -1,62 +1,383 @@
-.compannero {
+/* Contenedor wrapper principal */
+.compannero-wrapper {
   display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-
-.compannero-inicio {
   flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1rem;
+  width: 100%;
 }
 
-.compannero-flotante {
+.compannero-inicio-wrapper {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.compannero-flotante-wrapper {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  z-index: 50;
-  max-width: 300px;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 100;
+  max-width: 280px;
+  pointer-events: none; /* Dejar pasar clics si está sobre otra cosa, pero activar puntero en mascota */
 }
 
-.compannero-avatar {
-  flex-shrink: 0;
-  animation: float 3s ease-in-out infinite;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
-}
-
-.compannero-flotante .compannero-avatar {
-  animation: float 3s ease-in-out infinite;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); }
-}
-
-.compannero-burbuja {
-  background: var(--color-surface);
-  border: 2px solid var(--color-primary);
-  border-radius: 18px;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+/* Burbuja de diálogo */
+.speech-bubble-container {
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 1rem;
   position: relative;
-  font-size: 0.9rem;
-  line-height: 1.5;
+  filter: drop-shadow(0 6px 12px rgba(99, 102, 241, 0.1));
+  pointer-events: auto;
 }
 
-.compannero-burbuja::before {
+.speech-bubble {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 0.9rem 1.25rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 700;
+  text-align: center;
+  color: #1e293b;
+  position: relative;
+  border: 3px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.speech-bubble::after {
   content: '';
   position: absolute;
-  left: -8px;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 8px solid transparent;
-  border-right-color: var(--color-primary);
+  bottom: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
 }
 
-.compannero-burbuja p {
-  margin: 0;
-  color: var(--color-text);
-  font-weight: 500;
+.speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 14px 14px 0;
+  border-style: solid;
+  border-color: #e2e8f0 transparent;
+  display: block;
+  width: 0;
+  z-index: -1;
+}
+
+/* Si es flotante, la burbuja apunta al costado o arriba */
+.compannero-flotante-wrapper .speech-bubble-container {
+  max-width: 250px;
+}
+
+.compannero-flotante-wrapper .speech-bubble {
+  border-radius: 16px;
+  padding: 0.75rem 0.9rem;
+  font-size: 0.88rem;
+  border-color: var(--color-primary-light, #818cf8);
+}
+
+.compannero-flotante-wrapper .speech-bubble::after {
+  left: auto;
+  right: 40px;
+  transform: none;
+  border-width: 10px 10px 0;
+  bottom: -10px;
+  border-color: #ffffff transparent;
+}
+
+.compannero-flotante-wrapper .speech-bubble::before {
+  left: auto;
+  right: 39px;
+  transform: none;
+  border-width: 11px 11px 0;
+  bottom: -12px;
+  border-color: var(--color-primary-light, #818cf8) transparent;
+}
+
+.speech-bubble.bubble-pop {
+  animation: bubblePopEffect 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes bubblePopEffect {
+  0% { transform: scale(0.85); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Contenedor de la mascota */
+.mascot-container {
+  width: var(--mascot-size, 130px);
+  height: var(--mascot-size, 130px);
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  pointer-events: auto;
+  user-select: none;
+}
+
+.isla-svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+/* ANIMACIONES DE LA MASCOTA */
+
+/* Movimiento de flotación pasiva */
+.mascot-body-group {
+  animation: floatMascotEffect 4s ease-in-out infinite;
+  transform-origin: center 220px;
+}
+
+@keyframes floatMascotEffect {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.8deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Sombra base que pulsa inversamente */
+.mascot-shadow {
+  transform-origin: center 275px;
+  animation: shadowMascotEffect 4s ease-in-out infinite;
+  fill: rgba(30, 41, 59, 0.1);
+}
+
+@keyframes shadowMascotEffect {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(0.84); opacity: 0.45; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+/* Luz de antena latiendo */
+.antenna-light {
+  animation: glowMascotEffect 2s infinite ease-in-out;
+  transform-origin: 172px 28px;
+}
+
+@keyframes glowMascotEffect {
+  0% { filter: drop-shadow(0 0 2px #facc15) drop-shadow(0 0 4px #eab308); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 7px #facc15) drop-shadow(0 0 14px #facc15); transform: scale(1.15); }
+  100% { filter: drop-shadow(0 0 2px #facc15) drop-shadow(0 0 4px #eab308); transform: scale(1); }
+}
+
+/* Parpadeo de ojos */
+.eye-open {
+  animation: eyeBlinkEffect 5s infinite;
+}
+
+.eye-closed {
+  opacity: 0;
+  animation: eyeWinkEffect 5s infinite;
+}
+
+.eye-star {
+  opacity: 0;
+  transform-origin: 115px 150px;
+}
+.eye-right .eye-star {
+  transform-origin: 185px 150px;
+}
+
+@keyframes eyeBlinkEffect {
+  0%, 90%, 94%, 98%, 100% { opacity: 1; }
+  92%, 96% { opacity: 0; }
+}
+
+@keyframes eyeWinkEffect {
+  0%, 90%, 94%, 98%, 100% { opacity: 0; }
+  92%, 96% { opacity: 1; }
+}
+
+/* Ojos de Estrella (Estado Feliz) */
+.mascot-container.happy .eye-open,
+.mascot-container.happy .eye-closed {
+  opacity: 0 !important;
+  animation: none !important;
+}
+.mascot-container.happy .eye-star {
+  opacity: 1 !important;
+  animation: starRotateEffect 1.5s linear infinite;
+}
+
+@keyframes starRotateEffect {
+  0% { transform: scale(1) rotate(0deg); }
+  50% { transform: scale(1.1) rotate(180deg); }
+  100% { transform: scale(1) rotate(360deg); }
+}
+
+/* Boca feliz y sorprendida */
+.mouth-happy {
+  opacity: 0;
+}
+.mascot-container.happy .mouth-smile {
+  opacity: 0;
+}
+.mascot-container.happy .mouth-happy {
+  opacity: 1;
+}
+
+/* Animación al pasar el ratón (Hover) */
+.mascot-container:hover .mascot-body-group {
+  animation: hoverWiggleEffect 1s ease-in-out infinite;
+}
+
+@keyframes hoverWiggleEffect {
+  0%, 100% { transform: translateY(-4px) rotate(0deg); }
+  25% { transform: translateY(-12px) rotate(-2deg) scaleY(0.96); }
+  50% { transform: translateY(-17px) rotate(0deg) scaleY(1.04); }
+  75% { transform: translateY(-12px) rotate(2deg) scaleY(0.96); }
+}
+
+/* Animación de giro 3D (Click) */
+.mascot-container.spin-anim {
+  animation: bodySpinEffect 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes bodySpinEffect {
+  0% { transform: scale(1) rotateY(0deg); }
+  45% { transform: scale(0.9) rotateY(180deg); }
+  85% { transform: scale(1.05) rotateY(360deg); }
+  100% { transform: scale(1) rotateY(360deg); }
+}
+
+/* Accesorios: ocultar por defecto */
+.accessory-glasses,
+.accessory-explorer-hat,
+.accessory-wizard-hat {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Mostrar accesorios */
+.mascot-container.has-glasses .accessory-glasses {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mascot-container.has-explorer-hat .accessory-explorer-hat {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.mascot-container.has-wizard-hat .accessory-wizard-hat {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* CARD DE PERSONALIZACIÓN */
+.customizer-card {
+  width: 100%;
+  max-width: 380px;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(99, 102, 241, 0.08);
+  border: 3px solid #e2e8f0;
+  margin-top: 1.5rem;
+  transition: all 0.3s ease;
+  pointer-events: auto;
+}
+
+.customizer-card:hover {
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.12);
+}
+
+.customizer-title {
+  font-size: 1.15rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary, #4f46e5);
+  font-weight: 800;
+}
+
+.control-group {
+  margin-bottom: 0.9rem;
+}
+.control-group:last-child {
+  margin-bottom: 0;
+}
+
+.control-label {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--color-text-light, #6b7280);
+  margin-bottom: 0.4rem;
+}
+
+.color-options {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.color-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 3px solid #ffffff;
+  box-shadow: 0 0 0 2px #cbd5e1;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.color-btn:hover {
+  transform: scale(1.12);
+}
+
+.color-btn.active {
+  transform: scale(1.15);
+  box-shadow: 0 0 0 3px var(--color-primary, #4f46e5);
+}
+
+.accessory-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.accessory-btn {
+  flex: 1;
+  background: #f1f5f9;
+  border: 2px solid #cbd5e1;
+  color: #1e293b;
+  font-weight: 700;
+  padding: 0.45rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.82rem;
+  outline: none;
+}
+
+.accessory-btn:hover {
+  background: #e2e8f0;
+}
+
+.accessory-btn.active {
+  background: var(--color-primary, #4f46e5);
+  border-color: var(--color-primary, #4f46e5);
+  color: #ffffff;
+}
+
+.accessory-btn.toggle-btn {
+  background: #f8fafc;
+  border: 2px dashed #cbd5e1;
+}
+
+.accessory-btn.toggle-btn.active {
+  background: #ea580c;
+  border-color: #ea580c;
+  color: white;
 }
