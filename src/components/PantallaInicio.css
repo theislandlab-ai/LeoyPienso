@@ -2,18 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-  padding-top: 1rem;
+  gap: 1rem;
+  padding-top: 0.5rem;
 }
 
 .inicio-header {
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .inicio-titulo {
-  font-size: 2rem;
-  color: var(--color-primary);
+  font-size: 2.2rem;
+  background: linear-gradient(135deg, var(--color-primary), #7C3AED);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .inicio-subtitulo {
@@ -38,15 +43,15 @@
   border-radius: var(--radius-lg);
   background: var(--color-surface);
   border: 2px solid var(--color-border);
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05);
   transition: all 0.2s;
   text-align: left;
   width: 100%;
 }
 
 .nivel-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px -8px rgb(0 0 0 / 0.15);
 }
 
 .nivel-exploradores:hover,
@@ -101,4 +106,5 @@
 .btn-secundario:hover {
   background: var(--color-primary);
   color: white;
+  transform: translateY(-2px);
 }

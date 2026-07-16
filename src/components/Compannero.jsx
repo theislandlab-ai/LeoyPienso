@@ -3,44 +3,54 @@ import './Compannero.css'
 
 const EXPRESIONES = {
   normal: {
-    ojo_izq: 'M 30 37 a 5 5 0 1 1 10 0',
-    ojo_der: 'M 56 37 a 5 5 0 1 1 10 0',
-    boca: 'M 38 56 Q 43 60 48 56 Q 53 60 58 56',
-    color: '#4F46E5',
-    pupila_izq: 'M 32 37 a 2 2 0 1 1 4 0',
-    pupila_der: 'M 58 37 a 2 2 0 1 1 4 0',
+    color_tunic: '#4F46E5',
+    color_accent: '#818CF8',
+    blush: '#FBCFE8',
+    mouth_d: 'M 38 54 Q 43 58 48 54 Q 53 58 58 54',
+    brow_l: 'M 32 28 Q 36 25 42 27',
+    brow_r: 'M 58 27 Q 64 25 68 28',
+    eye_hl: 'M 37 31 a 2 2 0 1 1 4 0',
+    eye_hr: 'M 59 31 a 2 2 0 1 1 4 0',
   },
   feliz: {
-    ojo_izq: 'M 30 35 a 5 5 0 1 1 10 0',
-    ojo_der: 'M 56 35 a 5 5 0 1 1 10 0',
-    boca: 'M 36 54 Q 43 64 50 54 Q 57 64 60 54',
-    color: '#10B981',
-    pupila_izq: 'M 32 35 a 2 2 0 1 1 4 0',
-    pupila_der: 'M 58 35 a 2 2 0 1 1 4 0',
+    color_tunic: '#10B981',
+    color_accent: '#34D399',
+    blush: '#FCE7F3',
+    mouth_d: 'M 35 50 Q 43 62 51 50 Q 57 60 65 50',
+    brow_l: 'M 32 26 Q 36 23 42 25',
+    brow_r: 'M 58 25 Q 64 23 68 26',
+    eye_hl: 'M 37 30 a 2 2 0 1 1 4 0',
+    eye_hr: 'M 59 30 a 2 2 0 1 1 4 0',
   },
   pensativo: {
-    ojo_izq: 'M 30 39 a 5 5 0 1 1 10 0',
-    ojo_der: 'M 56 37 a 5 5 0 1 1 10 0',
-    boca: 'M 40 60 Q 47 56 56 60',
-    color: '#F59E0B',
-    pupila_izq: 'M 33 40 a 2 2 0 1 1 4 0',
-    pupila_der: 'M 59 39 a 2 2 0 1 1 4 0',
+    color_tunic: '#F59E0B',
+    color_accent: '#FBBF24',
+    blush: '#FEF3C7',
+    mouth_d: 'M 40 58 Q 47 54 56 58',
+    brow_l: 'M 33 32 Q 38 34 42 32',
+    brow_r: 'M 58 29 Q 64 27 68 30',
+    eye_hl: 'M 37 34 a 2 2 0 1 1 4 0',
+    eye_hr: 'M 59 31 a 2 2 0 1 1 4 0',
   },
   preocupado: {
-    ojo_izq: 'M 30 40 a 5 5 0 1 1 10 0',
-    ojo_der: 'M 56 40 a 5 5 0 1 1 10 0',
-    boca: 'M 38 62 Q 47 58 58 62',
-    color: '#EF4444',
-    pupila_izq: 'M 32 41 a 2 2 0 1 1 4 0',
-    pupila_der: 'M 58 41 a 2 2 0 1 1 4 0',
+    color_tunic: '#EF4444',
+    color_accent: '#F87171',
+    blush: '#FEE2E2',
+    mouth_d: 'M 38 60 Q 47 56 58 60',
+    brow_l: 'M 32 32 Q 36 35 42 33',
+    brow_r: 'M 58 33 Q 64 35 68 32',
+    eye_hl: 'M 37 35 a 2 2 0 1 1 4 0',
+    eye_hr: 'M 59 35 a 2 2 0 1 1 4 0',
   },
   animando: {
-    ojo_izq: 'M 30 33 a 6 6 0 1 1 12 0',
-    ojo_der: 'M 56 33 a 6 6 0 1 1 12 0',
-    boca: 'M 34 52 Q 43 66 52 52 Q 57 62 62 52',
-    color: '#8B5CF6',
-    pupila_izq: 'M 33 33 a 2 2 0 1 1 4 0',
-    pupila_der: 'M 59 33 a 2 2 0 1 1 4 0',
+    color_tunic: '#8B5CF6',
+    color_accent: '#A78BFA',
+    blush: '#EDE9FE',
+    mouth_d: 'M 33 48 Q 43 64 53 48 Q 59 60 67 48',
+    brow_l: 'M 32 24 Q 36 21 42 23',
+    brow_r: 'M 58 23 Q 64 21 68 24',
+    eye_hl: 'M 37 28 a 2 2 0 1 1 4 0',
+    eye_hr: 'M 59 28 a 2 2 0 1 1 4 0',
   },
 }
 
@@ -50,63 +60,95 @@ export default function Compannero({ expresion = 'normal', mensaje, tamano = 'no
   if (!esInicio && !mensaje) return null
 
   const expr = EXPRESIONES[expresion] || EXPRESIONES.normal
-  const size = tamano === 'grande' ? 200 : 100
+  const size = tamano === 'grande' ? 240 : 120
+  const s = tamano === 'grande' ? 1.0 : 0.5
 
   return (
     <div className={`compannero ${esInicio ? 'compannero-inicio' : 'compannero-flotante'}`}>
       <div className="compannero-avatar">
-        <svg width={size} height={size} viewBox="0 0 100 100">
-          {/* Cuerpo principal */}
-          <rect x="22" y="20" width="56" height="56" rx="16" fill={expr.color} opacity="0.12" />
-          <rect x="25" y="22" width="50" height="52" rx="14" fill="white" stroke={expr.color} strokeWidth="2" />
+        <svg width={size} height={size} viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          {/* Sombra suave */}
+          <ellipse cx="50" cy="86" rx="20" ry="4" fill="#00000010" />
+
+          {/* Piernas */}
+          <rect x="36" y="76" width="8" height="8" rx="4" fill={expr.color_tunic} opacity="0.6" />
+          <rect x="56" y="76" width="8" height="8" rx="4" fill={expr.color_tunic} opacity="0.6" />
+          {/* Zapatos */}
+          <ellipse cx="40" cy="85" rx="6" ry="3" fill={expr.color_tunic} opacity="0.8" />
+          <ellipse cx="60" cy="85" rx="6" ry="3" fill={expr.color_tunic} opacity="0.8" />
+
+          {/* Cuerpo - Túnica escolar */}
+          <path d="M 30 40 Q 30 38 32 36 L 38 32 Q 40 30 42 30 L 58 30 Q 60 30 62 32 L 68 36 Q 70 38 70 40 L 72 72 Q 72 76 68 76 L 32 76 Q 28 76 28 72 Z" fill="white" stroke={expr.color_tunic} strokeWidth="2" />
           
-          {/* Cabeza */}
-          <circle cx="50" cy="35" r="18" fill="white" stroke={expr.color} strokeWidth="2" />
-          <circle cx="50" cy="35" r="17" fill={expr.color} opacity="0.06" />
+          {/* Cuello de la túnica */}
+          <path d="M 38 32 Q 40 36 42 34 L 50 33 L 58 34 Q 60 36 62 32" fill="white" stroke={expr.color_tunic} strokeWidth="1.5" />
           
-          {/* Antenas / orejas tecnológicas */}
-          <rect x="30" y="14" width="4" height="6" rx="2" fill={expr.color} opacity="0.5" />
-          <rect x="66" y="14" width="4" height="6" rx="2" fill={expr.color} opacity="0.5" />
-          <circle cx="32" cy="13" r="3" fill={expr.color} opacity="0.7" />
-          <circle cx="68" cy="13" r="3" fill={expr.color} opacity="0.7" />
+          {/* Solapa izquierda de la túnica */}
+          <path d="M 38 32 Q 40 38 42 34 L 46 40 L 44 48 L 40 44 Q 36 40 38 32" fill={expr.color_tunic} opacity="0.1" stroke={expr.color_tunic} strokeWidth="1" />
           
-          {/* Ojos */}
-          <circle cx="37" cy="33" r="7" fill="white" stroke={expr.color} strokeWidth="1.5" />
-          <circle cx="63" cy="33" r="7" fill="white" stroke={expr.color} strokeWidth="1.5" />
-          <circle cx="39" cy="33" r="4" fill={expr.color} />
-          <circle cx="65" cy="33" r="4" fill={expr.color} />
-          <circle cx="40" cy="31" r="1.5" fill="white" />
-          <circle cx="66" cy="31" r="1.5" fill="white" />
-          
-          {/* Cejas */}
-          <path d="M 30 26 Q 35 23 42 26" stroke={expr.color} strokeWidth="1.5" fill="none" strokeLinecap="round" />
-          <path d="M 58 26 Q 65 23 70 26" stroke={expr.color} strokeWidth="1.5" fill="none" strokeLinecap="round" />
-          
-          {/* Boca */}
-          <path d={expr.boca} stroke={expr.color} strokeWidth="2" fill="none" strokeLinecap="round" />
-          
-          {/* Brazo izquierdo - señalando */}
-          <path d="M 25 42 L 8 32" stroke={expr.color} strokeWidth="3" strokeLinecap="round" fill="none" />
-          <path d="M 8 32 L 3 28" stroke={expr.color} strokeWidth="3" strokeLinecap="round" fill="none" />
-          {/* Mano señalando */}
-          <circle cx="3" cy="28" r="3" fill={expr.color} />
-          {/* Dedo índice */}
-          <line x1="3" y1="28" x2="0" y2="20" stroke={expr.color} strokeWidth="2.5" strokeLinecap="round" />
+          {/* Botones de la túnica */}
+          <circle cx="50" cy="42" r="2.5" fill={expr.color_accent} />
+          <circle cx="50" cy="52" r="2.5" fill={expr.color_accent} />
+          <circle cx="50" cy="62" r="2.5" fill={expr.color_accent} />
+
+          {/* Brazos */}
+          {/* Brazo izquierdo (señalando/animando) */}
+          <path d="M 30 42 Q 18 45 12 38" stroke={expr.color_tunic} strokeWidth="5" strokeLinecap="round" fill="none" />
+          {/* Mano izquierda señalando */}
+          <circle cx="12" cy="38" r="4" fill="#FFE4C4" />
+          <path d="M 10 36 L 6 28" stroke="#FFE4C4" strokeWidth="3" strokeLinecap="round" />
+          <path d="M 8 29 L 5 26" stroke="#FFE4C4" strokeWidth="2.5" strokeLinecap="round" />
           
           {/* Brazo derecho */}
-          <path d="M 75 48 L 88 42" stroke={expr.color} strokeWidth="3" strokeLinecap="round" fill="none" />
-          <circle cx="90" cy="41" r="3" fill={expr.color} />
+          <path d="M 70 42 Q 82 50 86 58" stroke={expr.color_tunic} strokeWidth="5" strokeLinecap="round" fill="none" />
+          {/* Mano derecha */}
+          <circle cx="86" cy="58" r="4" fill="#FFE4C4" />
+
+          {/* Cabeza */}
+          <circle cx="50" cy="20" r="16" fill="#FFE4C4" stroke={expr.color_tunic} strokeWidth="2" />
+
+          {/* Cabello - flequillo */}
+          <path d="M 34 16 Q 36 6 42 8 Q 46 2 50 6 Q 54 2 58 8 Q 64 6 66 16" fill={expr.color_tunic} opacity="0.8" />
+          <path d="M 36 14 Q 40 8 44 10 Q 48 5 52 10 Q 56 8 64 14" fill={expr.color_accent} opacity="0.5" />
+
+          {/* Moño/coleta en la cabeza */}
+          <circle cx="50" cy="4" r="5" fill={expr.color_accent} />
+          <path d="M 46 2 Q 48 -2 50 0 Q 52 -2 54 2" fill={expr.color_tunic} opacity="0.6" />
+
+          {/* Ojos grandes y expresivos */}
+          <ellipse cx="38" cy="20" rx="6" ry="7" fill="white" stroke={expr.color_tunic} strokeWidth="1.5" />
+          <ellipse cx="62" cy="20" rx="6" ry="7" fill="white" stroke={expr.color_tunic} strokeWidth="1.5" />
           
-          {/* Pantalla / cuerpo con detalles tecnológicos */}
-          <rect x="35" y="52" width="30" height="18" rx="4" fill={expr.color} opacity="0.08" stroke={expr.color} strokeWidth="1" />
-          {/* Líneas de código en la pantalla */}
-          <line x1="39" y1="57" x2="52" y2="57" stroke={expr.color} strokeWidth="1.5" opacity="0.4" strokeLinecap="round" />
-          <line x1="39" y1="61" x2="56" y2="61" stroke={expr.color} strokeWidth="1.5" opacity="0.3" strokeLinecap="round" />
-          <line x1="39" y1="65" x2="48" y2="65" stroke={expr.color} strokeWidth="1.5" opacity="0.2" strokeLinecap="round" />
+          {/* Iris */}
+          <circle cx="40" cy="20" r="4" fill={expr.color_tunic} />
+          <circle cx="64" cy="20" r="4" fill={expr.color_tunic} />
           
+          {/* Brillo de ojos (pupila) */}
+          <circle cx="38" cy="18" r="2" fill="white" />
+          <circle cx="62" cy="18" r="2" fill="white" />
+          <circle cx={expr.eye_hl.includes('37') ? 41 : 39} cy={expr.eye_hl.includes('31') ? 22 : 20} r="1.2" fill="white" opacity="0.7" />
+          <circle cx={expr.eye_hr.includes('59') ? 65 : 63} cy={expr.eye_hr.includes('31') ? 22 : 20} r="1.2" fill="white" opacity="0.7" />
+
+          {/* Cejas */}
+          <path d={expr.brow_l} stroke={expr.color_tunic} strokeWidth="1.8" fill="none" strokeLinecap="round" />
+          <path d={expr.brow_r} stroke={expr.color_tunic} strokeWidth="1.8" fill="none" strokeLinecap="round" />
+
+          {/* Mejillas sonrojadas */}
+          <ellipse cx="30" cy="24" rx="4" ry="3" fill={expr.blush} opacity="0.8" />
+          <ellipse cx="70" cy="24" rx="4" ry="3" fill={expr.blush} opacity="0.8" />
+
+          {/* Boca - sonrisa */}
+          <path d={expr.mouth_d} stroke={expr.color_tunic} strokeWidth="2" fill="none" strokeLinecap="round" />
+
+          {/* Lunares/pecas (opcional, da ternura) */}
+          <circle cx="35" cy="27" r="0.8" fill={expr.color_tunic} opacity="0.2" />
+          <circle cx="38" cy="28" r="0.8" fill={expr.color_tunic} opacity="0.2" />
+          <circle cx="62" cy="28" r="0.8" fill={expr.color_tunic} opacity="0.2" />
+          <circle cx="65" cy="27" r="0.8" fill={expr.color_tunic} opacity="0.2" />
+
           {/* Nombre ISLA */}
           {esInicio && (
-            <text x="50" y="84" textAnchor="middle" fill={expr.color} fontSize="10" fontWeight="800" fontFamily="sans-serif">
+            <text x="50" y="96" textAnchor="middle" fill={expr.color_tunic} fontSize="11" fontWeight="800" fontFamily="sans-serif" letterSpacing="2">
               ISLA
             </text>
           )}
