@@ -20,45 +20,51 @@ export default function PantallaInicio() {
         <p className="inicio-subtitulo">{i18n.app.subtitle}</p>
       </div>
 
-      <Compannero
-        expresion="feliz"
-        mensaje={i18n.inicio.titulo}
-        tamano="grande"
-      />
+      <div className="inicio-grid">
+        <div className="inicio-col-mascota">
+          <Compannero
+            expresion="feliz"
+            mensaje={i18n.inicio.titulo}
+            tamano="grande"
+          />
+        </div>
 
-      <div className="inicio-niveles">
-        <button
-          className="nivel-card nivel-exploradores"
-          onClick={() => elegirNivel('exploradores')}
-        >
-          <div className="nivel-icono">🔵</div>
-          <div className="nivel-info">
-            <h2>{i18n.inicio.nivel_exploradores}</h2>
-            <p>{i18n.inicio.nivel_exploradores_desc}</p>
-            <span className="nivel-progreso">
-              {contarNivel('exploradores')} textos leídos
-            </span>
-          </div>
-        </button>
+        <div className="inicio-col-contenido">
+          <div className="inicio-niveles">
+            <button
+              className="nivel-card nivel-exploradores"
+              onClick={() => elegirNivel('exploradores')}
+            >
+              <div className="nivel-icono">🔵</div>
+              <div className="nivel-info">
+                <h2>{i18n.inicio.nivel_exploradores}</h2>
+                <p>{i18n.inicio.nivel_exploradores_desc}</p>
+                <span className="nivel-progreso">
+                  {contarNivel('exploradores')} textos leídos
+                </span>
+              </div>
+            </button>
 
-        <button
-          className="nivel-card nivel-aventureros"
-          onClick={() => elegirNivel('aventureros')}
-        >
-          <div className="nivel-icono">🟢</div>
-          <div className="nivel-info">
-            <h2>{i18n.inicio.nivel_aventureros}</h2>
-            <p>{i18n.inicio.nivel_aventureros_desc}</p>
-            <span className="nivel-progreso">
-              {contarNivel('aventureros')} textos leídos
-            </span>
+            <button
+              className="nivel-card nivel-aventureros"
+              onClick={() => elegirNivel('aventureros')}
+            >
+              <div className="nivel-icono">🟢</div>
+              <div className="nivel-info">
+                <h2>{i18n.inicio.nivel_aventureros}</h2>
+                <p>{i18n.inicio.nivel_aventureros_desc}</p>
+                <span className="nivel-progreso">
+                  {contarNivel('aventureros')} textos leídos
+                </span>
+              </div>
+            </button>
           </div>
-        </button>
+
+          <button className="btn-secundario" onClick={irAMapa}>
+            {i18n.mapa.titulo}
+          </button>
+        </div>
       </div>
-
-      <button className="btn-secundario" onClick={irAMapa}>
-        {i18n.mapa.titulo}
-      </button>
     </div>
   )
 }

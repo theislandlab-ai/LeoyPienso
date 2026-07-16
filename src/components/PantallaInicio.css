@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 1.5rem 1rem;
+  width: 100%;
 }
 
 .inicio-header {
@@ -13,7 +14,7 @@
 
 .inicio-titulo {
   font-family: 'Fredoka', cursive, sans-serif;
-  font-size: 2.8rem;
+  font-size: 3rem;
   background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -24,9 +25,33 @@
 
 .inicio-subtitulo {
   color: var(--color-text-light, #6b7280);
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   font-weight: 600;
   margin-top: 0.35rem;
+}
+
+/* Grilla Responsiva de dos columnas */
+.inicio-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 3rem;
+  align-items: start;
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.inicio-col-mascota {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inicio-col-contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
 }
 
 .inicio-niveles {
@@ -34,7 +59,6 @@
   flex-direction: column;
   gap: 1.5rem;
   width: 100%;
-  max-width: 420px;
 }
 
 /* Tarjetas Tridimensionales estilo Duolingo */
@@ -128,7 +152,6 @@
   align-items: center;
   gap: 0.5rem;
   width: 100%;
-  max-width: 420px;
   padding: 1rem 1.5rem;
   border-radius: 24px;
   background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
@@ -156,4 +179,13 @@
 .btn-secundario:active {
   transform: translateY(4px);
   box-shadow: 0 2px 0px #b45309, 0 4px 8px rgba(245, 158, 11, 0.15);
+}
+
+/* Ajuste responsivo para tablets y smartphones */
+@media (max-width: 768px) {
+  .inicio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 420px;
+  }
 }
