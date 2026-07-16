@@ -1,0 +1,89 @@
+{
+  "id": "avent-015",
+  "titulo": "La niña que dibujaba sonrisas",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 253,
+  "imagen": "ninha-dibuja.svg",
+  "texto": "En un pueblo donde todos estaban siempre apurados, vivía una niña llamada Lucila. A Lucila le encantaba dibujar, pero no dibujaba cualquier cosa. Dibujaba sonrisas. Las dibujaba en servilletas, en cuadernos, en piedras y hasta en las veredas con tiza. Un día, Lucila vio a una señora en la plaza que parecía muy triste. La señora miraba el suelo mientras sus nietos jugaban. Lucila se acercó y le dibujó una sonrisa en una hoja. —Señora, para usted —dijo. La señora levantó la vista y, al ver el dibujo, una sonrisa verdadera apareció en su rostro. —Gracias, pequeña —dijo—. Hoy es el aniversario de la muerte de mi esposo y estaba recordándolo. Tu dibujo me alegró el día. Lucila entendió algo importante: una sonrisa dibujada podía crear una sonrisa verdadera. Desde entonces, dibujó sonrisas por todo el pueblo. En los vidrios empañados de la panadería, en los boletos del colectivo, en los posavasos del bar. Poco a poco, la gente empezó a notarlo. Los que recibían una sonrisa dibujada, sonreían de verdad. El pueblo comenzó a cambiar. La gente ya no caminaba tan apurada. Se saludaban más, se detenían a conversar. Todo porque una niña entendió que a veces lo más simple puede cambiar el mundo. Y así, con tizas de colores y hojas de papel, Lucila pintó su pueblo de sonrisas.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "En un pueblo donde todos estaban siempre apurados, vivía una niña llamada Lucila. A Lucila le encantaba dibujar, pero no dibujaba cualquier cosa. Dibujaba sonrisas. Las dibujaba en servilletas, en cuadernos, en piedras y hasta en las veredas con tiza.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Lucila dibuja sonrisas en todos lados. Qué costumbre tan especial y bonita. Me pregunto por qué dibuja justo sonrisas."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Un día, Lucila vio a una señora en la plaza que parecía muy triste. La señora miraba el suelo mientras sus nietos jugaban. Lucila se acercó y le dibujó una sonrisa en una hoja. —Señora, para usted —dijo.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que va a hacer la señora con el dibujo?",
+        "opciones": ["Lo va a tirar a la basura", "Se va a poner contenta", "Le va a decir a Lucila que se vaya"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "La señora levantó la vista y, al ver el dibujo, una sonrisa verdadera apareció en su rostro. —Gracias, pequeña —dijo—. Hoy es el aniversario de la muerte de mi esposo y estaba recordándolo. Tu dibujo me alegró el día.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'aniversario'?",
+        "opciones": ["El cumpleaños de alguien", "La fecha en que se recuerda un evento del pasado", "El día de la semana", "Una celebración familiar"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Lucila entendió algo importante: una sonrisa dibujada podía crear una sonrisa verdadera. Desde entonces, dibujó sonrisas por todo el pueblo. En los vidrios empañados de la panadería, en los boletos del colectivo, en los posavasos del bar.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Cómo creés que reaccionó la gente del pueblo al encontrar las sonrisas dibujadas?",
+        "opciones": ["Se enojaron", "Empezaron a sonreír más", "No les importó"]
+      }
+    },
+    {
+      "id": 5,
+      "contenido": "Poco a poco, la gente empezó a notarlo. Los que recibían una sonrisa dibujada, sonreían de verdad. El pueblo comenzó a cambiar. La gente ya no caminaba tan apurada. Se saludaban más, se detenían a conversar. Todo porque una niña entendió que a veces lo más simple puede cambiar el mundo.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué le gustaba dibujar a Lucila?",
+      "opciones": ["Animales", "Sonrisas", "Paisajes", "Casas"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el pueblo cambió después de que Lucila empezó a dibujar sonrisas?",
+      "opciones": ["Porque la gente tenía más tiempo libre", "Porque los dibujos hicieron que la gente se sintiera mejor y fuera más amable", "Porque el gobierno pintó las paredes", "Porque llegó un circo al pueblo"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué significa que la gente 'estaba apurada'?",
+      "opciones": ["Que caminaban lento", "Que tenían prisa y hacían todo rápido", "Que estaban contentos", "Que estaban descansando"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una niña que contagia alegría con sus dibujos", "De un pueblo donde nadie sonríe", "De una clase de dibujo"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["amabilidad", "dibujo", "alegría", "empatía", "comunidad"]
+  }
+}

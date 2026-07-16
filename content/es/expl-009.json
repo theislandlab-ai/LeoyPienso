@@ -1,0 +1,72 @@
+{
+  "id": "expl-009",
+  "titulo": "Los colores del arcoíris",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "informativo",
+  "palabras": 78,
+  "imagen": "arcoiris-colores.svg",
+  "texto": "El arcoíris aparece en el cielo cuando llueve y sale el sol al mismo tiempo. Tiene siete colores: rojo, naranja, amarillo, verde, azul, índigo y violeta. El rojo está en la parte de afuera y el violeta en la de adentro. La luz del sol es blanca, pero cuando pasa por las gotas de lluvia se separa en todos esos colores. Por eso vemos el arcoíris. Para recordar los colores en orden podés aprender una frase. Por ejemplo: «Rosa Nació Amarilla, Verde Azul, Inés Vino». Cada letra es un color del arcoíris.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "El arcoíris aparece en el cielo cuando llueve y sale el sol al mismo tiempo. Tiene siete colores: rojo, naranja, amarillo, verde, azul, índigo y violeta.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Alguna vez viste un arcoíris? ¿Dónde estaba?",
+        "opciones": ["Sí, en el cielo después de la lluvia", "Sí, en un dibujo", "No, nunca vi uno"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "El rojo está en la parte de afuera y el violeta en la de adentro. La luz del sol es blanca, pero cuando pasa por las gotas de lluvia se separa en todos esos colores.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir que la luz del sol 'se separa'?",
+        "opciones": ["Que se rompe en pedazos", "Que se divide en diferentes colores", "Que desaparece", "Que cambia de lugar"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Para recordar los colores en orden podés aprender una frase. Por ejemplo: «Rosa Nació Amarilla, Verde Azul, Inés Vino». Cada letra es un color del arcoíris.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cuántos colores tiene el arcoíris?",
+      "opciones": ["Cinco", "Seis", "Siete", "Ocho"],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Cuándo aparece un arcoíris en el cielo?",
+      "opciones": ["Cuando llueve mucho", "Cuando hay sol y lluvia al mismo tiempo", "Cuando es de noche", "Cuando hay nubes nada más"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Para qué sirve la frase «Rosa Nació Amarilla, Verde Azul, Inés Vino»?",
+      "opciones": ["Para aprender los colores en orden", "Para decorar una habitación", "Para cantar una canción", "Para dibujar un arcoíris"],
+      "respuesta_correcta": 0
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De cómo se forma el arcoíris", "De cómo pintar un arcoíris", "De una aventura al final del arcoíris"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["colores", "naturaleza", "ciencia", "arcoíris"]
+  }
+}

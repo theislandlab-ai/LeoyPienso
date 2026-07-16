@@ -1,0 +1,72 @@
+{
+  "id": "expl-002",
+  "titulo": "El día que el sol se escondió",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "narrativo",
+  "palabras": 85,
+  "imagen": "sol-nubes.svg",
+  "texto": "Una mañana, el sol no salió. Todos los animales del bosque estaban preocupados. —¿Dónde está el sol? —preguntó el conejito. —Quizás está enfermo —dijo la ardilla. El búho, que es el más sabio, dijo: —Vamos a buscarlo. Caminaron hasta la montaña más alta. Allí encontraron al sol, que estaba tapado por unas nubes muy gruesas. —¡Soplen fuerte! —dijo el búho. Todos soplaron juntos y las nubes se fueron. El sol volvió a brillar y todos celebraron.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Una mañana, el sol no salió. Todos los animales del bosque estaban preocupados. —¿Dónde está el sol? —preguntó el conejito.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Por qué creés que no salió el sol?",
+        "opciones": ["Porque es de noche", "Porque está tapado por nubes", "Porque se fue a otro lugar"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "—Quizás está enfermo —dijo la ardilla. El búho, que es el más sabio, dijo: —Vamos a buscarlo. Caminaron hasta la montaña más alta.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir que el búho es 'el más sabio'?",
+        "opciones": ["El que más sabe", "El más grande", "El que más vuela", "El más viejo"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Allí encontraron al sol, que estaba tapado por unas nubes muy gruesas. —¡Soplen fuerte! —dijo el búho. Todos soplaron juntos y las nubes se fueron. El sol volvió a brillar y todos celebraron.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Por qué no salió el sol esa mañana?",
+      "opciones": ["Porque estaba enfermo", "Porque estaba tapado por nubes", "Porque se fue de viaje", "Porque era de noche"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Cómo se sintieron los animales cuando el sol no salió?",
+      "opciones": ["Contentos", "Preocupados", "Enojados", "Dormidos"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué quiere decir 'celebraron'?",
+      "opciones": ["Estaban tristes", "Estaban felices y festejaron", "Se fueron a dormir", "Siguieron caminando"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De animales que buscan el sol", "De una noche muy larga", "De un sol que se pierde en el bosque"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["naturaleza", "animales", "trabajo en equipo"]
+  }
+}

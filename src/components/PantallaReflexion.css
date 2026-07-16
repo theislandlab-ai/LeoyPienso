@@ -1,0 +1,88 @@
+.reflexion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+.reflexion-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.reflexion-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  font-size: 1rem;
+  text-align: left;
+  transition: all 0.2s;
+  color: var(--color-text);
+}
+
+.reflexion-btn:hover {
+  border-color: var(--color-primary-light);
+}
+
+.reflexion-btn.seleccionada {
+  border-color: var(--color-primary);
+  background: #EEF2FF;
+}
+
+.reflexion-emoji {
+  font-size: 1.5rem;
+}
+
+.reflexion-check {
+  margin-left: auto;
+  color: var(--color-green);
+  font-weight: 800;
+  font-size: 1.2rem;
+}
+
+.caja-herramientas {
+  width: 100%;
+  max-width: 400px;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  border: 2px solid var(--color-secondary);
+}
+
+.caja-herramientas h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.herramientas-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.herramienta-tag {
+  padding: 0.4rem 0.75rem;
+  border-radius: 20px;
+  background: #FFFBEB;
+  border: 1px solid var(--color-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.reflexion-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+}

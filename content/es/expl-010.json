@@ -1,0 +1,80 @@
+{
+  "id": "expl-010",
+  "titulo": "El tesoro del jardín",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "narrativo",
+  "palabras": 98,
+  "imagen": "jardin-tesoro.svg",
+  "texto": "Valentina y Tomás jugaban en el jardín de su abuela. —Vamos a buscar un tesoro —dijo Valentina. La abuela sonrió y les dio una pala pequeña. —Caven detrás del rosal —les dijo. Los niños empezaron a cavar con mucha emoción. De repente, la pala hizo ¡clanc! contra algo duro. —¡Encontramos algo! —gritaron. Sacaron tierra con las manos y encontraron una caja de madera vieja. La abrió y dentro había piedras de colores, una pluma de pavo real y un collar de caracoles. —Esto lo enterré cuando era chica como ustedes —dijo la abuela. Valentina y Tomás miraron el tesoro con los ojos brillantes. Nunca habían visto algo tan especial.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Valentina y Tomás jugaban en el jardín de su abuela. —Vamos a buscar un tesoro —dijo Valentina. La abuela sonrió y les dio una pala pequeña. —Caven detrás del rosal —les dijo.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "La abuela sabe que hay algo enterrado allí. Me pregunto qué será el tesoro que van a encontrar."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Los niños empezaron a cavar con mucha emoción. De repente, la pala hizo ¡clanc! contra algo duro. —¡Encontramos algo! —gritaron. Sacaron tierra con las manos y encontraron una caja de madera vieja.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que hay adentro de la caja?",
+        "opciones": ["Monedas de oro", "Recuerdos de la abuela cuando era chica", "Un mapa del tesoro"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "La abrió y dentro había piedras de colores, una pluma de pavo real y un collar de caracoles. —Esto lo enterré cuando era chica como ustedes —dijo la abuela.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "En la historia, ¿qué quiere decir que miraron 'con los ojos brillantes'?",
+        "opciones": ["Que tenían los ojos mojados", "Que estaban muy emocionados", "Que tenían sol en los ojos", "Que tenían sueño"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Valentina y Tomás miraron el tesoro con los ojos brillantes. Nunca habían visto algo tan especial.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Dónde les dijo la abuela que cavaran?",
+      "opciones": ["Debajo del árbol", "Detrás del rosal", "Al lado de la puerta", "En el medio del jardín"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el tesoro era especial para la abuela?",
+      "opciones": ["Porque valía mucho dinero", "Porque era de cuando ella era chica y tenía recuerdos", "Porque lo encontró en un viaje", "Porque se lo regalaron"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Qué es un 'tesoro' en esta historia?",
+      "opciones": ["Un cofre lleno de monedas", "Algo muy valioso para quien lo encuentra", "Un mapa escondido", "Un animal del jardín"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De niños que encuentran algo escondido", ["De un jardín mágico", "De cómo plantar flores"]]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["aventura", "familia", "abuelos", "imaginación"]
+  }
+}

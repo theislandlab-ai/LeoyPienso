@@ -1,0 +1,89 @@
+{
+  "id": "avent-013",
+  "titulo": "El mapa del abuelo",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 283,
+  "imagen": "mapa-abuelo.svg",
+  "texto": "Cuando el abuelo de Emilia falleció, le dejó una caja de madera con una nota que decía: «Para mi nieta curiosa». Adentro había un mapa dibujado a mano, con montañas, ríos y un camino marcado con líneas punteadas. Al final del camino había una X roja. —Es un mapa del tesoro —dijo Emilia emocionada. Su papá sonrió con nostalgia. —Tu abuelo amaba las aventuras. Cuando era joven, recorrió todo el país buscando lugares increíbles. Emilia estudió el mapa. El camino empezaba en el pueblo y subía hasta la colina de Los Tres Pinos. —Allá vamos —dijo. Al día siguiente, Emilia y su papá caminaron hasta la colina. Encontraron los tres pinos exactamente como estaban dibujados. Debajo del más alto, había una piedra con una flecha tallada que señalaba hacia el este. Siguieron la dirección y llegaron a un arroyo. Del otro lado del arroyo, el mapa indicaba un roble solitario. Cuando llegaron al roble, Emilia buscó entre las raíces. Encontró una cajita metálica oxidada. La abrió temblando de emoción. Dentro no había oro ni joyas. Había una colección de piedras de colores, conchas marinas y plumas de aves. También una foto del abuelo sonriendo en la cima de una montaña, y una carta. La carta decía: «El verdadero tesoro no es lo que se encuentra, sino lo que se descubre en el camino. Espero que hayas disfrutado la aventura tanto como yo». Emilia guardó la carta contra su pecho y sonrió.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Cuando el abuelo de Emilia falleció, le dejó una caja de madera con una nota que decía: «Para mi nieta curiosa». Adentro había un mapa dibujado a mano, con montañas, ríos y un camino marcado con líneas punteadas. Al final del camino había una X roja.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que va a encontrar Emilia al final del mapa?",
+        "opciones": ["Un tesoro de oro y joyas", "Un recuerdo especial del abuelo", "Nada, el mapa es un dibujo sin significado"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "—Es un mapa del tesoro —dijo Emilia emocionada. Su papá sonrió con nostalgia. —Tu abuelo amaba las aventuras. Cuando era joven, recorrió todo el país buscando lugares increíbles.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'nostalgia'?",
+        "opciones": ["Tristeza por algo que pasó", "Un recuerdo con cariño y un poco de melancolía", "Enojo por algo perdido", "Alegría por algo nuevo"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Emilia estudió el mapa. El camino empezaba en el pueblo y subía hasta la colina de Los Tres Pinos. —Allá vamos —dijo. Al día siguiente, Emilia y su papá caminaron hasta la colina. Encontraron los tres pinos exactamente como estaban dibujados. Debajo del más alto, había una piedra con una flecha tallada que señalaba hacia el este.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "El abuelo dejó pistas para seguir. Debajo del pino hay una flecha tallada en piedra. El mapa es como un juego de pistas al aire libre."
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Siguieron la dirección y llegaron a un arroyo. Del otro lado del arroyo, el mapa indicaba un roble solitario. Cuando llegaron al roble, Emilia buscó entre las raíces. Encontró una cajita metálica oxidada.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que hay dentro de la cajita metálica?",
+        "opciones": ["Monedas de oro", "Recuerdos y objetos especiales del abuelo", "Un mensaje que dice que el tesoro está en otro lado"]
+      }
+    },
+    {
+      "id": 5,
+      "contenido": "La abrió temblando de emoción. Dentro no había oro ni joyas. Había una colección de piedras de colores, conchas marinas y plumas de aves. También una foto del abuelo sonriendo en la cima de una montaña, y una carta.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué le dejó el abuelo a Emilia?",
+      "opciones": ["Dinero y joyas", "Una caja con un mapa dibujado a mano", "Una carta y una foto", "Un libro de aventuras"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el abuelo le dejó un mapa del tesoro en lugar de un regalo común?",
+      "opciones": ["Porque no tenía dinero para comprar un regalo", "Porque quería que Emilia viviera una aventura como las que él amaba", "Porque quería que Emilia encontrara algo valioso", "Porque era un juego familiar"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la carta, el abuelo dice: «El verdadero tesoro no es lo que se encuentra, sino lo que se descubre en el camino». ¿Qué quiso decir?",
+      "opciones": ["Que el oro no vale nada", "Que la experiencia y la aventura son más valiosas que cualquier objeto", "Que no hay que buscar tesoros", "Que el camino es más importante que el destino"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una niña que busca un tesoro", "De un abuelo que cuenta historias", "De un mapa antiguo"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["familia", "abuelos", "aventura", "tesoro", "recuerdos"]
+  }
+}

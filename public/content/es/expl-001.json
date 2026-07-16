@@ -1,0 +1,71 @@
+{
+  "id": "expl-001",
+  "titulo": "La tortuga y la liebre",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "narrativo",
+  "palabras": 98,
+  "imagen": "tortuga-liebre.svg",
+  "texto": "La liebre siempre se reía de la tortuga porque caminaba muy despacio. Un día, la tortuga dijo: —¿Querés correr una carrera? La liebre se rió más fuerte. —¡Vamos! —dijo. La liebre salió corriendo muy rápido. Muy pronto estaba tan adelante que decidió descansar debajo de un árbol. Se quedó dormida. La tortuga siguió caminando sin parar. Pasó al lado de la liebre que dormía y llegó a la meta. Cuando la liebre despertó, la tortuga ya había ganado.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "La liebre siempre se reía de la tortuga porque caminaba muy despacio. Un día, la tortuga dijo: —¿Querés correr una carrera?",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Mmm, la tortuga quiere correr una carrera con la liebre que corre muy rápido. ¿Qué creo que va a pasar? La liebre es mucho más rápida... pero la tortuga debe tener algún plan."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "La liebre se rió más fuerte. —¡Vamos! —dijo. La liebre salió corriendo muy rápido. Muy pronto estaba tan adelante que decidió descansar debajo de un árbol.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que va a hacer la liebre mientras descansa?",
+        "opciones": ["Va a seguir mirando el paisaje", "Se va a quedar dormida", "Va a volver corriendo"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Se quedó dormida. La tortuga siguió caminando sin parar. Pasó al lado de la liebre que dormía y llegó a la meta. Cuando la liebre despertó, la tortuga ya había ganado.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Por qué la liebre se reía de la tortuga?",
+      "opciones": ["Porque la tortuga era muy vieja", "Porque la tortuga caminaba muy despacio", "Porque la tortuga no quería correr", "Porque la tortuga era muy chiquita"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué ganó la tortuga si camina más despacio?",
+      "opciones": ["Porque la liebre se durmió", "Porque la tortuga corrió muy rápido", "Porque la liebre se perdió", "Porque la tortuga conocía un atajo"],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué quiere decir 'la liebre se reía más fuerte'?",
+      "opciones": ["Que estaba contenta", "Que se burlaba de la tortuga", "Que escuchó un chiste", "Que estaba nerviosa"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una carrera entre animales", "De una tortuga que vuela", "De una liebre que aprende a bailar"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Fábula clásica de Esopo (adaptación)",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["fábula", "animales", "esfuerzo", "perseverancia"]
+  }
+}

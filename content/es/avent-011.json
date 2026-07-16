@@ -1,0 +1,89 @@
+{
+  "id": "avent-011",
+  "titulo": "La carrera de la amistad",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 245,
+  "imagen": "carrera-amistad.svg",
+  "texto": "Todos los años, el pueblo de Los Sauces organizaba una carrera de bicicletas. Los hermanos Simón y Mateo siempre participaban juntos. Simón era el mayor y siempre ganaba. Mateo nunca se enojaba por perder, porque su hermano le enseñaba trucos para mejorar. Pero este año era diferente. Semanas antes de la carrera, Simón se lastimó un tobillo jugando al fútbol. El médico dijo que no podía correr. —No voy a poder participar —dijo Simón con tristeza—. Pero vos sí, Mateo. Vas a representar a nuestra familia. El día de la carrera, Mateo se puso la camiseta que Simón usaba cuando ganaba. En la línea de salida estaban todos los competidores. Sonó el silbato y empezaron a pedalear. Mateo iba tercero cuando escuchó un ruido detrás. Una de las bicicletas había chocado y un niño estaba en el suelo llorando. Era Tomás, el más chico de todos. Mateo frenó en seco. —¿Estás bien? —preguntó. Tomás tenía la rodilla raspada y la bicicleta con la cadena saltada. Mateo miró hacia adelante: los otros competidores se alejaban. Entonces se agachó y arregló la cadena. —Subí, vamos juntos —dijo. Llegaron últimos, pero cuando cruzaron la meta, Simón los esperaba aplaudiendo. —Hoy ganaste algo más importante que una carrera —dijo Simón abrazándolo.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Todos los años, el pueblo de Los Sauces organizaba una carrera de bicicletas. Los hermanos Simón y Mateo siempre participaban juntos. Simón era el mayor y siempre ganaba. Mateo nunca se enojaba por perder, porque su hermano le enseñaba trucos para mejorar.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Simón siempre gana pero también le enseña a su hermano. Parece que la competencia entre ellos es sana y se ayudan mutuamente."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Pero este año era diferente. Semanas antes de la carrera, Simón se lastimó un tobillo jugando al fútbol. El médico dijo que no podía correr. —No voy a poder participar —dijo Simón con tristeza—. Pero vos sí, Mateo. Vas a representar a nuestra familia.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'representar' en esta historia?",
+        "opciones": ["Dibujar algo", "Actuar en nombre de alguien o algo", "Correr más rápido", "Gritar el nombre de alguien"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "El día de la carrera, Mateo se puso la camiseta que Simón usaba cuando ganaba. En la línea de salida estaban todos los competidores. Sonó el silbato y empezaron a pedalear. Mateo iba tercero cuando escuchó un ruido detrás.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "Si vos fueras Mateo y vas tercero en la carrera, ¿qué harías si ves que otro niño se cayó?",
+        "opciones": ["Seguiría para ganar la carrera", "Me detendría a ayudarlo aunque pierda", "Le gritaría que se levante"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Una de las bicicletas había chocado y un niño estaba en el suelo llorando. Era Tomás, el más chico de todos. Mateo frenó en seco. —¿Estás bien? —preguntó. Tomás tenía la rodilla raspada y la bicicleta con la cadena saltada.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que va a hacer Mateo?",
+        "opciones": ["Seguir su carrera y dejar a Tomás", "Ayudar a Tomás aunque pierda la carrera", "Llamar a un adulto y seguir"]
+      }
+    },
+    {
+      "id": 5,
+      "contenido": "Mateo miró hacia adelante: los otros competidores se alejaban. Entonces se agachó y arregló la cadena. —Subí, vamos juntos —dijo. Llegaron últimos, pero cuando cruzaron la meta, Simón los esperaba aplaudiendo. —Hoy ganaste algo más importante que una carrera —dijo Simón abrazándolo.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Por qué Simón no pudo participar en la carrera este año?",
+      "opciones": ["Porque no quería", "Porque se lastimó un tobillo", "Porque perdió su bicicleta", "Porque estaba enfermo"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué Simón dijo que Mateo ganó algo más importante que la carrera?",
+      "opciones": ["Porque Mateo llegó primero", "Porque Mateo demostró ser solidario y ayudó a otro", "Porque Mateo se divirtió", "Porque Mateo aprendió a andar en bicicleta"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué quiere decir 'frenó en seco'?",
+      "opciones": ["Frenó despacio", "Frenó de golpe y de manera repentina", "Frenó con los pies", "No frenó"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una carrera de bicicletas", "De dos hermanos que compiten", "De un niño que aprende a andar en bicicleta"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["amistad", "solidaridad", "deporte", "familia", "valores"]
+  }
+}

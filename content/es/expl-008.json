@@ -1,0 +1,80 @@
+{
+  "id": "expl-008",
+  "titulo": "El cumpleaños de Mateo",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "narrativo",
+  "palabras": 102,
+  "imagen": "cumpleanos-fiesta.svg",
+  "texto": "Mateo cumplía siete años. Su mamá le preparó una fiesta sorpresa. Invitó a todos sus amigos de la escuela. Cuando Mateo llegó a su casa, todos gritaron: —¡Sorpresa! Mateo se puso muy contento. Había globos de colores, una torta de chocolate y muchos juegos. Primero jugaron a la mancha. Después hicieron una carrera de embolsados. Todos se reían mucho. Llegó el momento de soplar las velas. Mateo pidió un deseo: —Deseo que todos mis amigos estén siempre felices. Sopló las velas y todos aplaudieron. Al final, cada amigo le regaló un dibujo. Mateo dijo que era el mejor cumpleaños de su vida.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Mateo cumplía siete años. Su mamá le preparó una fiesta sorpresa. Invitó a todos sus amigos de la escuela. Cuando Mateo llegó a su casa, todos gritaron: —¡Sorpresa! Mateo se puso muy contento.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Qué emoción, una fiesta sorpresa. Mateo no sabía nada y de repente todos sus amigos están ahí esperándolo."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Había globos de colores, una torta de chocolate y muchos juegos. Primero jugaron a la mancha. Después hicieron una carrera de embolsados. Todos se reían mucho.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué juego te gusta más en las fiestas de cumpleaños?",
+        "opciones": ["Jugar a la mancha", "Las carreras de embolsados", "La piñata"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Llegó el momento de soplar las velas. Mateo pidió un deseo: —Deseo que todos mis amigos estén siempre felices. Sopló las velas y todos aplaudieron.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'pidió un deseo'?",
+        "opciones": ["Que pidió comida", "Que pensó algo que le gustaría que pase", "Que pidió ayuda", "Que dijo su nombre"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Al final, cada amigo le regaló un dibujo. Mateo dijo que era el mejor cumpleaños de su vida.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué edad cumplía Mateo?",
+      "opciones": ["Cinco años", "Seis años", "Siete años", "Ocho años"],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Cómo se sintió Mateo cuando vio la sorpresa?",
+      "opciones": ["Enojado", "Triste", "Muy contento", "Asustado"],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué es una 'carrera de embolsados'?",
+      "opciones": ["Una carrera con mochilas", "Una carrera saltando dentro de una bolsa", "Una carrera con bolsas de regalos", "Una carrera para ver quién embolsa más rápido"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una fiesta de cumpleaños", "De un niño que no quiere cumplir años", "De un regalo muy especial"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["cumpleaños", "amistad", "familia", "juegos"]
+  }
+}

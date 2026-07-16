@@ -1,0 +1,89 @@
+{
+  "id": "avent-005",
+  "titulo": "El puente del arcoíris",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 255,
+  "imagen": "puente-arcoiris.svg",
+  "texto": "En el pueblo de Valle Verde vivía una niña llamada Luna. Todos los días miraba el arcoíris desde su ventana y soñaba con cruzarlo. —Un día voy a caminar hasta el final del arcoíris —le dijo a su abuelo. El abuelo sonrió. —Los arcoíris no tienen un final, Luna. Pero eso no significa que no puedas encontrar algo maravilloso. Una tarde, después de una lluvia intensa, apareció el arcoíris más brillante que Luna hubiera visto. Parecía que empezaba justo al lado de su casa. Sin pensarlo dos veces, salió corriendo. Llegó a un campo lleno de flores y el arcoíris parecía tocarlo. Entonces vio algo que la dejó sin aliento: en medio del campo había un puente hecho de luz, tan real como si fuera de piedra. Luna dio un paso y luego otro. El puente la llevó a un lugar donde los colores tenían sabor: el rojo sabía a frutilla, el azul a menta y el amarillo a limón. Allí conoció a una niña llamada Iris, que cuidaba los colores del mundo. —Cada vez que llueve y sale el sol, construyo este puente —dijo Iris—. Pero muy pocos se animan a cruzarlo. Luna pasó la tarde recorriendo el mundo de colores. Cuando volvió, el abuelo la esperaba en la puerta. —¿Encontraste algo maravilloso? —le preguntó. Luna sonrió y mostró una flor que cambiaba de color. —Encontré un mundo entero, abuelo.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "En el pueblo de Valle Verde vivía una niña llamada Luna. Todos los días miraba el arcoíris desde su ventana y soñaba con cruzarlo. —Un día voy a caminar hasta el final del arcoíris —le dijo a su abuelo.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Luna sueña con cruzar el arcoíris. Me pregunto si realmente se puede caminar sobre un arcoíris."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "El abuelo sonrió. —Los arcoíris no tienen un final, Luna. Pero eso no significa que no puedas encontrar algo maravilloso. Una tarde, después de una lluvia intensa, apareció el arcoíris más brillante que Luna hubiera visto. Parecía que empezaba justo al lado de su casa.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que va a encontrar Luna si sigue el arcoíris?",
+        "opciones": ["El final del arcoíris con una olla de oro", "Un lugar mágico lleno de colores", "Nada, porque los arcoíris no se pueden tocar"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Sin pensarlo dos veces, salió corriendo. Llegó a un campo lleno de flores y el arcoíris parecía tocarlo. Entonces vio algo que la dejó sin aliento: en medio del campo había un puente hecho de luz, tan real como si fuera de piedra.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Qué quiere decir 'la dejó sin aliento'?",
+        "opciones": ["Que no podía respirar", "Que quedó muy sorprendida", "Que se quedó dormida", "Que se fue corriendo"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Luna dio un paso y luego otro. El puente la llevó a un lugar donde los colores tenían sabor: el rojo sabía a frutilla, el azul a menta y el amarillo a limón. Allí conoció a una niña llamada Iris, que cuidaba los colores del mundo.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "Si los colores tuvieran sabor, ¿qué color te gustaría probar primero?",
+        "opciones": ["El rojo", "El azul", "El amarillo"]
+      }
+    },
+    {
+      "id": 5,
+      "contenido": "—Cada vez que llueve y sale el sol, construyo este puente —dijo Iris—. Pero muy pocos se animan a cruzarlo. Luna pasó la tarde recorriendo el mundo de colores. Cuando volvió, el abuelo la esperaba en la puerta. —¿Encontraste algo maravilloso? —le preguntó. Luna sonrió y mostró una flor que cambiaba de color. —Encontré un mundo entero, abuelo.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cómo se llamaba la niña que cuidaba los colores?",
+      "opciones": ["Luna", "Iris", "Valle", "Verde"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el abuelo le dijo que los arcoíris no tienen final?",
+      "opciones": ["Porque quería que Luna no saliera de casa", "Porque los arcoíris son un efecto de la luz, no un lugar físico", "Porque nunca había visto un arcoíris", "Porque estaba enojado"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué significa 'maravilloso'?",
+      "opciones": ["Algo común y corriente", "Algo extraordinario que causa admiración", "Algo muy pequeño", "Algo que da miedo"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una niña que cruza un arcoíris", "De cómo se forman los arcoíris", "De un pueblo donde siempre llueve"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["fantasía", "imaginación", "colores", "aventura", "familia"]
+  }
+}

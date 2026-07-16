@@ -1,0 +1,80 @@
+{
+  "id": "avent-002",
+  "titulo": "Cómo hacen la miel las abejas",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 182,
+  "imagen": "abejas-miel.svg",
+  "texto": "La miel que comemos es fabricada por las abejas. Pero hacer miel no es nada fácil: es un trabajo en equipo que involucra a toda la colmena. Primero, las abejas obreras salen a buscar flores. Con su lengua chupan el néctar, un líquido dulce que las flores producen. Las abejas guardan el néctar en un estómago especial llamado buche. Cuando el buche está lleno, la abeja regresa a la colmena. Allí pasa el néctar a otra abeja obrera, y así una tras otra. Durante este proceso, las abejas agregan enzimas que transforman el néctar. Después depositan la mezcla en los panales, que son como celditas de cera. Luego agitan sus alas para ventilar el panal y el agua del néctar se evapora. Así se espesa hasta convertirse en miel. Finalmente, las abejas cubren los panales con una capa de cera para guardar la miel. Una colmena puede producir entre veinte y treinta kilos de miel por año.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "La miel que comemos es fabricada por las abejas. Pero hacer miel no es nada fácil: es un trabajo en equipo que involucra a toda la colmena. Primero, las abejas obreras salen a buscar flores.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Las abejas trabajan en equipo para hacer la miel. Cada una tiene una tarea distinta en la colmena."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Con su lengua chupan el néctar, un líquido dulce que las flores producen. Las abejas guardan el néctar en un estómago especial llamado buche. Cuando el buche está lleno, la abeja regresa a la colmena.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué es el 'néctar'?",
+        "opciones": ["Un tipo de miel", "Un líquido dulce que producen las flores", "El veneno de las abejas", "El polvo de las flores"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Allí pasa el néctar a otra abeja obrera, y así una tras otra. Durante este proceso, las abejas agregan enzimas que transforman el néctar. Después depositan la mezcla en los panales, que son como celditas de cera.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que pasa después de que depositan la mezcla en los panales?",
+        "opciones": ["La miel ya está lista para comer", "Agitan las alas para que se evapore el agua", "Tapan los panales inmediatamente"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Luego agitan sus alas para ventilar el panal y el agua del néctar se evapora. Así se espesa hasta convertirse en miel. Finalmente, las abejas cubren los panales con una capa de cera para guardar la miel.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿En qué parte del cuerpo guardan el néctar las abejas?",
+      "opciones": ["En la lengua", "En el buche", "En las alas", "En el abdomen"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué las abejas agitan sus alas sobre los panales?",
+      "opciones": ["Para volar más rápido", "Para ventilar y que el agua se evapore", "Para llamar a otras abejas", "Para enfriar la miel"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Qué son los 'panales'?",
+      "opciones": ["Los nidos de las abejas en los árboles", "Las celditas de cera donde guardan la miel", "Las flores que visitan las abejas", "Los estómagos de las abejas"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De cómo las abejas hacen la miel", "De cómo vuelan las abejas", "De los diferentes tipos de abejas"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["abejas", "naturaleza", "ciencia", "miel", "trabajo en equipo"]
+  }
+}

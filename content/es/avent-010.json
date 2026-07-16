@@ -1,0 +1,89 @@
+{
+  "id": "avent-010",
+  "titulo": "Animales en peligro de extinción",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 214,
+  "imagen": "animales-peligro.svg",
+  "texto": "Muchos animales en el mundo corren peligro de desaparecer para siempre. Esto se llama estar en peligro de extinción. Entre las causas principales están la destrucción de su hábitat, la caza ilegal y el cambio climático. El yaguareté es el felino más grande de América. Vive en las selvas de Argentina, Brasil y otros países. Pero la deforestación ha reducido su hogar y hoy quedan muy pocos ejemplares. El oso polar vive en el Ártico y depende del hielo marino para cazar focas. Con el calentamiento global, el hielo se derrite cada vez más rápido y los osos polares tienen dificultades para encontrar comida. La tortuga marina viaja miles de kilómetros por el océano. Las redes de pesca y la contaminación del agua ponen en riesgo su vida. Además, las luces de las ciudades confunden a las crías cuando nacen en la playa. Para ayudar a estos animales, podemos cuidar el medio ambiente, no comprar productos hechos con partes de animales en peligro y contarles a otros lo importante que es proteger la biodiversidad. Cada especie que desaparece es una pérdida para todo el planeta.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Muchos animales en el mundo corren peligro de desaparecer para siempre. Esto se llama estar en peligro de extinción. Entre las causas principales están la destrucción de su hábitat, la caza ilegal y el cambio climático.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'extinción'?",
+        "opciones": ["Que un animal se va de viaje", "Que una especie deja de existir por completo", "Que un animal cambia de color", "Que los animales se mudan a otro lugar"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "El yaguareté es el felino más grande de América. Vive en las selvas de Argentina, Brasil y otros países. Pero la deforestación ha reducido su hogar y hoy quedan muy pocos ejemplares.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Por qué creés que quedan pocos yaguaretés?",
+        "opciones": ["Porque se fueron a otro lugar", "Porque la deforestación destruyó su hogar", "Porque no les gusta la selva"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "El oso polar vive en el Ártico y depende del hielo marino para cazar focas. Con el calentamiento global, el hielo se derrite cada vez más rápido y los osos polares tienen dificultades para encontrar comida.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "El calentamiento global está derritiendo el hielo del Ártico. Sin hielo, los osos polares no pueden cazar. Es un problema muy serio."
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "La tortuga marina viaja miles de kilómetros por el océano. Las redes de pesca y la contaminación del agua ponen en riesgo su vida. Además, las luces de las ciudades confunden a las crías cuando nacen en la playa.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué podemos hacer para ayudar a estos animales?",
+        "opciones": ["Cuidar el medio ambiente y no contaminar", "Tenerlos como mascotas", "No hacer nada porque es un problema de adultos"]
+      }
+    },
+    {
+      "id": 5,
+      "contenido": "Para ayudar a estos animales, podemos cuidar el medio ambiente, no comprar productos hechos con partes de animales en peligro y contarles a otros lo importante que es proteger la biodiversidad. Cada especie que desaparece es una pérdida para todo el planeta.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cuál es el felino más grande de América?",
+      "opciones": ["El león", "El yaguareté", "El tigre", "El puma"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el calentamiento global afecta a los osos polares?",
+      "opciones": ["Porque les da calor", "Porque derrite el hielo que necesitan para cazar", "Porque cambia el color de su pelaje", "Porque los hace dormir más"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "literal",
+      "pregunta": "¿Qué amenaza a las tortugas marinas?",
+      "opciones": ["Los tiburones", "Las redes de pesca y la contaminación", "El frío del océano", "La falta de comida"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De animales que están en peligro de desaparecer", "De cómo cuidar a las mascotas", "De animales de la granja"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["animales", "extinción", "medio ambiente", "naturaleza", "conciencia"]
+  }
+}

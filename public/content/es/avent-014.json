@@ -1,0 +1,80 @@
+{
+  "id": "avent-014",
+  "titulo": "El ciclo del agua",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 193,
+  "imagen": "ciclo-agua.svg",
+  "texto": "El agua de la Tierra no se pierde nunca, sino que cambia de forma y se mueve constantemente en un proceso llamado ciclo del agua. Este ciclo tiene tres etapas principales. La primera es la evaporación. El sol calienta el agua de los océanos, ríos y lagos. El agua se convierte en vapor y sube al cielo. La segunda etapa es la condensación. El vapor de agua sube a la atmósfera, donde hace más frío. Allí se enfría y se transforma en pequeñas gotitas de agua que se juntan para formar las nubes. La tercera etapa es la precipitación. Cuando las gotitas en las nubes se vuelven demasiado pesadas, caen como lluvia. Si hace mucho frío, caen como nieve o granizo. El agua que cae vuelve a los océanos, ríos y lagos, y también se filtra en la tierra. Así el ciclo comienza de nuevo. Este ciclo es esencial para la vida. Sin él, no tendríamos agua limpia para beber, las plantas no crecerían y los animales no tendrían agua para sobrevivir. El agua que bebemos hoy es la misma que existía en la época de los dinosaurios.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "El agua de la Tierra no se pierde nunca, sino que cambia de forma y se mueve constantemente en un proceso llamado ciclo del agua. Este ciclo tiene tres etapas principales. La primera es la evaporación.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'evaporación'?",
+        "opciones": ["Que el agua se congela", "Que el agua se calienta y se convierte en vapor", "Que el agua hierve", "Que el agua desaparece para siempre"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "El sol calienta el agua de los océanos, ríos y lagos. El agua se convierte en vapor y sube al cielo. La segunda etapa es la condensación. El vapor de agua sube a la atmósfera, donde hace más frío. Allí se enfría y se transforma en pequeñas gotitas de agua que se juntan para formar las nubes.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "El vapor sube, se enfría y forma nubes. Es como cuando el vapor de la ducha empaña el espejo. Es el mismo proceso pero a gran escala."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "La tercera etapa es la precipitación. Cuando las gotitas en las nubes se vuelven demasiado pesadas, caen como lluvia. Si hace mucho frío, caen como nieve o granizo. El agua que cae vuelve a los océanos, ríos y lagos, y también se filtra en la tierra. Así el ciclo comienza de nuevo.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué pasa con el agua de lluvia que cae en la tierra?",
+        "opciones": ["Desaparece", "Vuelve a ríos y lagos o se filtra en la tierra", "Se convierte en hielo"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Este ciclo es esencial para la vida. Sin él, no tendríamos agua limpia para beber, las plantas no crecerían y los animales no tendrían agua para sobrevivir. El agua que bebemos hoy es la misma que existía en la época de los dinosaurios.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cuáles son las tres etapas del ciclo del agua?",
+      "opciones": ["Evaporación, condensación y precipitación", "Calor, frío y lluvia", "Sol, nubes y viento", "Agua, tierra y aire"],
+      "respuesta_correcta": 0
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el agua que bebemos es la misma que existía en la época de los dinosaurios?",
+      "opciones": ["Porque el agua es muy vieja", "Porque el agua se recicla constantemente en el ciclo del agua", "Porque los dinosaurios no tomaban agua", "Porque el agua no se puede destruir"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Qué es la 'precipitación'?",
+      "opciones": ["Cuando el agua se evapora", "Cuando el agua cae del cielo en forma de lluvia, nieve o granizo", "Cuando se forman las nubes", "Cuando el agua se filtra en la tierra"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De los océanos y mares", "Del recorrido del agua en la naturaleza", "De cómo se forman las nubes"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["agua", "ciclo del agua", "ciencia", "naturaleza", "ecología"]
+  }
+}

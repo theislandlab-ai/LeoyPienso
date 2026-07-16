@@ -1,0 +1,71 @@
+{
+  "id": "expl-006",
+  "titulo": "La hormiga y el grano de trigo",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "narrativo",
+  "palabras": 87,
+  "imagen": "hormiga-trigo.svg",
+  "texto": "Una hormiga encontró un grano de trigo en el campo. —Qué suerte tengo —dijo—. Ahora tengo comida para el invierno. Pero el grano de trigo le dijo: —Por favor, no me comas. Si me dejás en la tierra, el año que viene tendrás muchos granos. La hormiga pensó y pensó. —Está bien —dijo—. Te voy a enterrar. Enterró el grano y esperó. Pasó el invierno y llegó la primavera. Del grano nació una espiga llena de trigo. La hormiga tenía comida para todo el año. —Gracias por confiar en mí —dijo la espiga.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Una hormiga encontró un grano de trigo en el campo. —Qué suerte tengo —dijo—. Ahora tengo comida para el invierno. Pero el grano de trigo le dijo: —Por favor, no me comas.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que le va a pedir el grano de trigo a la hormiga?",
+        "opciones": ["Que lo deje en la tierra para crecer", "Que se lo lleve a su hormiguero", "Que llame a otras hormigas"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Si me dejás en la tierra, el año que viene tendrás muchos granos. La hormiga pensó y pensó. —Está bien —dijo—. Te voy a enterrar. Enterró el grano y esperó.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "La hormiga tuvo que decidir entre comer ahora o esperar para tener más comida después. A veces vale la pena esperar."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Pasó el invierno y llegó la primavera. Del grano nació una espiga llena de trigo. La hormiga tenía comida para todo el año. —Gracias por confiar en mí —dijo la espiga.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué encontró la hormiga en el campo?",
+      "opciones": ["Una flor", "Un grano de trigo", "Otra hormiga", "Una hoja"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué al final la hormiga tuvo mucha comida?",
+      "opciones": ["Porque encontró más granos", "Porque el grano se convirtió en una espiga con muchos granos", "Porque otras hormigas le compartieron", "Porque compró comida"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué es una 'espiga'?",
+      "opciones": ["Un animal del campo", "La parte de la planta de trigo que tiene los granos", "Un tipo de flor", "Una herramienta para cavar"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una hormiga que aprende a esperar", "De un grano que escapa rodando", "De hormigas que pelean por comida"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Fábula tradicional (adaptación)",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["fábula", "animales", "paciencia", "confianza"]
+  }
+}

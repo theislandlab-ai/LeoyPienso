@@ -1,0 +1,89 @@
+{
+  "id": "avent-009",
+  "titulo": "El secreto de la biblioteca",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 262,
+  "imagen": "biblioteca-secreta.svg",
+  "texto": "La biblioteca del barrio cerraba para siempre. Todos estaban tristes, pero nadie más que Valentín, que iba allí cada tarde después de la escuela. —Tienen que llevarse los libros que quieran —dijo la bibliotecaria, doña Inés—. La biblioteca cierra el viernes. Valentín recorrió los estantes vacíos sintiendo una gran tristeza. En un rincón olvidado encontró un libro pequeño, con la tapa desgastada y sin título. Lo abrió y dentro había una nota escrita a mano: «Para encontrar el tesoro, seguí el rastro de los libros que nadie lee». Valentín mostró la nota a su amiga Mora. —Es un mensaje secreto —dijo Mora con los ojos brillantes—. Vamos a buscar. Buscaron entre los libros más viejos. Encontraron un ejemplar de poemas que tenía una marca en la página treinta y tres. Allí estaba escrito: «Mirá detrás del mapa de la ciudad». Corrieron hacia el mapa colgado en la pared. Detrás encontraron un sobre amarillo. Dentro había una foto de doña Inés cuando era joven, sosteniendo un letrero que decía: «Biblioteca Popular La Estrella». Debajo de la foto decía: «Fundada en 1985». —No entiendo —dijo Valentín. Fueron con doña Inés. Ella sonrió al ver la foto. —La biblioteca no cierra para siempre, niños. Se muda a un lugar más grande. El tesoro es que la historia de la biblioteca sigue viva. Y ustedes acaban de descubrirlo.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "La biblioteca del barrio cerraba para siempre. Todos estaban tristes, pero nadie más que Valentín, que iba allí cada tarde después de la escuela. —Tienen que llevarse los libros que quieran —dijo la bibliotecaria, doña Inés—. La biblioteca cierra el viernes.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Cómo creés que se siente Valentín al saber que la biblioteca cierra?",
+        "opciones": ["Contento porque se lleva libros", "Triste porque pierde su lugar favorito", "Enojado con la bibliotecaria"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Valentín recorrió los estantes vacíos sintiendo una gran tristeza. En un rincón olvidado encontró un libro pequeño, con la tapa desgastada y sin título. Lo abrió y dentro había una nota escrita a mano: «Para encontrar el tesoro, seguí el rastro de los libros que nadie lee».",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Una nota secreta dentro de un libro sin título. Esto parece el comienzo de una gran aventura. Me pregunto qué tesoro encontrarán."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Valentín mostró la nota a su amiga Mora. —Es un mensaje secreto —dijo Mora con los ojos brillantes—. Vamos a buscar. Buscaron entre los libros más viejos. Encontraron un ejemplar de poemas que tenía una marca en la página treinta y tres. Allí estaba escrito: «Mirá detrás del mapa de la ciudad».",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir un 'rastro'?",
+        "opciones": ["Un sonido", "Una huella o señal que deja algo o alguien", "Un libro viejo", "Un tipo de mapa"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Corrieron hacia el mapa colgado en la pared. Detrás encontraron un sobre amarillo. Dentro había una foto de doña Inés cuando era joven, sosteniendo un letrero que decía: «Biblioteca Popular La Estrella». Debajo de la foto decía: «Fundada en 1985».",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que significa esta foto?",
+        "opciones": ["Que la biblioteca se va a mudar", "Que doña Inés fundó la biblioteca", "Que la biblioteca es muy antigua"]
+      }
+    },
+    {
+      "id": 5,
+      "contenido": "—No entiendo —dijo Valentín. Fueron con doña Inés. Ella sonrió al ver la foto. —La biblioteca no cierra para siempre, niños. Se muda a un lugar más grande. El tesoro es que la historia de la biblioteca sigue viva. Y ustedes acaban de descubrirlo.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué encontró Valentín dentro del libro sin título?",
+      "opciones": ["Un mapa", "Una nota escrita a mano", "Una foto", "Un marcador de libros"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué doña Inés sonrió al ver la foto?",
+      "opciones": ["Porque era una foto divertida", "Porque la biblioteca no cerraba, sino que se mudaba", "Porque la foto tenía dinero", "Porque reconoció a un amigo"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué significa que la tapa del libro estaba 'desgastada'?",
+      "opciones": ["Que estaba rota", "Que estaba gastada por el uso y el tiempo", "Que tenía polvo", "Que era de color oscuro"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una biblioteca que esconde un secreto", "De cómo se ordenan los libros", "De un niño que aprende a leer"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["biblioteca", "misterio", "libros", "aventura", "amistad"]
+  }
+}

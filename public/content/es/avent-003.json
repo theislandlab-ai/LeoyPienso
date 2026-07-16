@@ -1,0 +1,80 @@
+{
+  "id": "avent-003",
+  "titulo": "La decisión de Sofía",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 225,
+  "imagen": "ninha-decision.svg",
+  "texto": "Sofía tenía un problema. El sábado era el cumpleaños de su mejor amiga Valeria, pero también era la final del torneo de ajedrez de la escuela. Sofía era la mejor jugadora de su clase y había entrenado durante meses. —No sé qué hacer —le dijo a su mamá—. Si voy al cumpleaños, pierdo el torneo. Si voy al torneo, Valeria se va a sentir mal. Su mamá la abrazó. —A veces las decisiones difíciles nos ayudan a crecer. Pensá qué es lo que tu corazón te dice. Sofía se quedó en su cuarto pensando. Recordó cuando Valeria la había ayudado con la tarea de matemáticas. Recordó también lo feliz que se ponía cuando jugaba al ajedrez. Al día siguiente, Sofía fue a hablar con Valeria. —No puedo fallarte en tu cumpleaños —dijo—. Vas a estar solo una vez. El torneo de ajedrez se repite todos los años. Valeria la miró con una gran sonrisa. —Sabía que eras una buena amiga. Además, te preparé una sorpresa: vamos a tener un torneo de ajedrez en mi cumpleaños.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Sofía tenía un problema. El sábado era el cumpleaños de su mejor amiga Valeria, pero también era la final del torneo de ajedrez de la escuela. Sofía era la mejor jugadora de su clase y había entrenado durante meses.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué creés que debería hacer Sofía?",
+        "opciones": ["Ir al cumpleaños porque la amistad es importante", "Ir al torneo porque entrenó mucho", "Intentar hacer las dos cosas"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "—No sé qué hacer —le dijo a su mamá—. Si voy al cumpleaños, pierdo el torneo. Si voy al torneo, Valeria se va a sentir mal. Su mamá la abrazó. —A veces las decisiones difíciles nos ayudan a crecer. Pensá qué es lo que tu corazón te dice.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "La mamá de Sofía le dice que escuche a su corazón. A veces las decisiones importantes no son fáciles, pero tenemos que elegir lo que sentimos que está bien."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Sofía se quedó en su cuarto pensando. Recordó cuando Valeria la había ayudado con la tarea de matemáticas. Recordó también lo feliz que se ponía cuando jugaba al ajedrez. Al día siguiente, Sofía fue a hablar con Valeria.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Qué quiere decir 'decidir' en esta historia?",
+        "opciones": ["Pedir ayuda", "Elegir entre dos opciones", "Dejar todo para después", "Jugar un partido"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "—No puedo fallarte en tu cumpleaños —dijo—. Vas a estar solo una vez. El torneo de ajedrez se repite todos los años. Valeria la miró con una gran sonrisa. —Sabía que eras una buena amiga. Además, te preparé una sorpresa: vamos a tener un torneo de ajedrez en mi cumpleaños.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué dos cosas importantes pasaban el mismo sábado?",
+      "opciones": ["El cumpleaños de Sofía y un torneo de ajedrez", "El cumpleaños de Valeria y la final de ajedrez", "Un examen y un cumpleaños", "Una fiesta y una competencia de baile"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué Sofía decidió ir al cumpleaños de Valeria?",
+      "opciones": ["Porque no le gustaba el ajedrez", "Porque valoraba más la amistad que el torneo", "Porque Valeria la obligó", "Porque perdió el torneo"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué significa 'fallarte'?",
+      "opciones": ["Perder un partido", "No cumplir con lo que alguien espera de vos", "Tirar algo al piso", "Llegar tarde"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De una niña que tiene que elegir entre dos cosas importantes", "De un torneo de ajedrez", "De una fiesta de cumpleaños"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["amistad", "decisiones", "valores", "empatía"]
+  }
+}

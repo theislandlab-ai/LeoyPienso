@@ -1,0 +1,72 @@
+{
+  "id": "expl-007",
+  "titulo": "Mi mascota",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "informativo",
+  "palabras": 72,
+  "imagen": "mascota-perro.svg",
+  "texto": "Tener una mascota es una gran responsabilidad. Las mascotas necesitan comida, agua y cariño todos los días. Los perros y los gatos son las mascotas más comunes. Los perros necesitan salir a pasear y jugar. Los gatos son más independientes, pero también les gusta que los acaricien. También hay mascotas más pequeñas como hamsters, peces o tortugas. Cada mascota tiene necesidades diferentes. Es importante aprender cómo cuidarla antes de tener una. Cuando cuidamos bien a nuestra mascota, ella nos da mucho amor y compañía.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Tener una mascota es una gran responsabilidad. Las mascotas necesitan comida, agua y cariño todos los días. Los perros y los gatos son las mascotas más comunes.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'responsabilidad'?",
+        "opciones": ["Un juego divertido", "Una obligación o deber que tenemos", "Un tipo de mascota", "Un lugar para dormir"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Los perros necesitan salir a pasear y jugar. Los gatos son más independientes, pero también les gusta que los acaricien. También hay mascotas más pequeñas como hamsters, peces o tortugas.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué mascota te gustaría tener y por qué?",
+        "opciones": ["Un perro porque puedo jugar con él", "Un gato porque es tranquilo", "Un pez porque no necesita mucho espacio"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Cada mascota tiene necesidades diferentes. Es importante aprender cómo cuidarla antes de tener una. Cuando cuidamos bien a nuestra mascota, ella nos da mucho amor y compañía.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué necesitan las mascotas todos los días?",
+      "opciones": ["Juguetes nuevos", "Comida, agua y cariño", "Ir al veterinario", "Dormir todo el día"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué los perros necesitan salir a pasear más que los gatos?",
+      "opciones": ["Porque los perros son más grandes", "Porque los perros necesitan más ejercicio", "Porque los gatos duermen mucho", "Porque los gatos no salen de casa"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En el texto, ¿qué quiere decir 'independientes'?",
+      "opciones": ["Que necesitan mucha ayuda", "Que pueden hacer cosas solos", "Que son muy pequeños", "Que no les gusta jugar"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De cómo cuidar a las mascotas", "De animales salvajes", "De cómo entrenar perros"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["mascotas", "animales", "responsabilidad", "cuidados"]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "avent-007",
+  "titulo": "El inventor de sueños",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 235,
+  "imagen": "inventor-suenhos.svg",
+  "texto": "Don Rómulo era el inventor del pueblo. Tenía un taller lleno de engranajes, tubos y cables. Todos los días inventaba cosas: un paraguas que daba calor, un despertador que olía a pan tostado y una lámpara que funcionaba con energía de las plantas. Pero su invento favorito era diferente. Se llamaba el «Proyector de Sueños». Era una máquina con una pantalla grande y una campana de vidrio en el centro. —¿Para qué sirve? —le preguntó Clara, su nieta. —Para ver los sueños de las personas —respondió don Rómulo—. Ponés un objeto especial de alguien dentro de la campana, y la máquina muestra sus sueños en la pantalla. Clara corrió a su casa y volvió con una pulsera de su mamá. Don Rómulo la colocó en la campana. La pantalla mostró imágenes de playas, palmeras y un atardecer. —Tu mamá sueña con viajar —dijo don Rómulo. Después Clara trajo una pluma de su papá. La pantalla mostró un jardín lleno de libros. —Tu papá sueña con tener una biblioteca en casa. Clara miró a su abuelo. —¿Y vos, abuelo? ¿Con qué soñás? Don Rómulo sonrió y puso su mano sobre la campana. En la pantalla apareció Clara, grande, con un título de científica en la mano. —Mi sueño es verte cumplir los tuyos —dijo.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Don Rómulo era el inventor del pueblo. Tenía un taller lleno de engranajes, tubos y cables. Todos los días inventaba cosas: un paraguas que daba calor, un despertador que olía a pan tostado y una lámpara que funcionaba con energía de las plantas.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué invento de don Rómulo te parece más interesante?",
+        "opciones": ["El paraguas que da calor", "El despertador con olor a pan tostado", "La lámpara de energía de plantas"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Pero su invento favorito era diferente. Se llamaba el «Proyector de Sueños». Era una máquina con una pantalla grande y una campana de vidrio en el centro. —¿Para qué sirve? —le preguntó Clara, su nieta.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Un proyector de sueños... qué idea tan maravillosa. Me pregunto cómo funcionará y qué tipo de sueños podrá mostrar."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "—Para ver los sueños de las personas —respondió don Rómulo—. Ponés un objeto especial de alguien dentro de la campana, y la máquina muestra sus sueños en la pantalla. Clara corrió a su casa y volvió con una pulsera de su mamá. Don Rómulo la colocó en la campana. La pantalla mostró imágenes de playas, palmeras y un atardecer. —Tu mamá sueña con viajar —dijo don Rómulo.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué son los 'engranajes'?",
+        "opciones": ["Tornillos y clavos", "Ruedas dentadas que transmiten movimiento", "Tubos de metal", "Piezas de madera"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Después Clara trajo una pluma de su papá. La pantalla mostró un jardín lleno de libros. —Tu papá sueña con tener una biblioteca en casa. Clara miró a su abuelo. —¿Y vos, abuelo? ¿Con qué soñás? Don Rómulo sonrió y puso su mano sobre la campana. En la pantalla apareció Clara, grande, con un título de científica en la mano. —Mi sueño es verte cumplir los tuyos —dijo.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cómo se llama el invento favorito de don Rómulo?",
+      "opciones": ["El Proyector de Imágenes", "El Proyector de Sueños", "La Máquina de los Deseos", "El Lector de Pensamientos"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el sueño de don Rómulo es que Clara cumpla los suyos?",
+      "opciones": ["Porque no tiene sueños propios", "Porque ama a su nieta y quiere que sea feliz", "Porque quiere que Clara sea inventora", "Porque no le gusta su taller"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué significa 'cumplir los sueños'?",
+      "opciones": ["Dormirse rápido", "Lograr lo que uno desea", "Terminar una tarea", "Tener pesadillas"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De un inventor que crea una máquina de sueños", "De una niña que aprende a inventar", "De un pueblo lleno de inventos"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["inventos", "sueños", "familia", "abuelos", "imaginación"]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "avent-012",
+  "titulo": "Qué es la fotosíntesis",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 173,
+  "imagen": "fotosintesis-planta.svg",
+  "texto": "Las plantas son los únicos seres vivos que fabrican su propio alimento. Este proceso se llama fotosíntesis. Para realizarlo, las plantas necesitan tres cosas: luz del sol, agua y dióxido de carbono, que es un gas del aire. La fotosíntesis ocurre en las hojas. Las hojas tienen una sustancia verde llamada clorofila que atrapa la energía del sol. Con esa energía, la planta transforma el agua que toma del suelo por las raíces y el dióxido de carbono del aire en glucosa, que es su alimento. Durante este proceso, la planta libera oxígeno al aire. El oxígeno es el gas que nosotros respiramos. Por eso las plantas son tan importantes para la vida en la Tierra. Sin ellas, no tendríamos oxígeno para respirar. La fotosíntesis también es importante porque las plantas son la base de la cadena alimenticia. Los animales herbívoros comen plantas, y los carnívoros comen a esos animales. Todo depende de la energía que las plantas capturan del sol.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Las plantas son los únicos seres vivos que fabrican su propio alimento. Este proceso se llama fotosíntesis. Para realizarlo, las plantas necesitan tres cosas: luz del sol, agua y dióxido de carbono, que es un gas del aire.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué es el 'dióxido de carbono'?",
+        "opciones": ["Un gas que las plantas necesitan", "Un tipo de agua", "Una parte de la planta", "Un mineral del suelo"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "La fotosíntesis ocurre en las hojas. Las hojas tienen una sustancia verde llamada clorofila que atrapa la energía del sol. Con esa energía, la planta transforma el agua y el dióxido de carbono en glucosa, que es su alimento.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "La clorofila es lo que da el color verde a las hojas. Es como un panel solar que atrapa la energía del sol para la planta."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Durante este proceso, la planta libera oxígeno al aire. El oxígeno es el gas que nosotros respiramos. Por eso las plantas son tan importantes para la vida en la Tierra. Sin ellas, no tendríamos oxígeno para respirar.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Por qué son importantes las plantas para nosotros?",
+        "opciones": ["Porque dan sombra", "Porque producen oxígeno para respirar", "Porque son decorativas"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "La fotosíntesis también es importante porque las plantas son la base de la cadena alimenticia. Los animales herbívoros comen plantas, y los carnívoros comen a esos animales. Todo depende de la energía que las plantas capturan del sol.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué tres cosas necesitan las plantas para hacer la fotosíntesis?",
+      "opciones": ["Sol, agua y tierra", "Sol, agua y dióxido de carbono", "Sol, oxígeno y agua", "Agua, tierra y aire"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué las plantas son fundamentales para la vida en la Tierra?",
+      "opciones": ["Porque dan frutas ricas", "Porque producen oxígeno y son la base de la cadena alimenticia", "Porque embellecen el paisaje", "Porque dan madera para construir"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Qué es la 'clorofila'?",
+      "opciones": ["La raíz de la planta", "Una sustancia verde que atrapa la energía del sol", "Una flor de colores", "El tallo de la planta"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De cómo crecen las plantas", "De cómo las plantas fabrican su alimento", "De los diferentes tipos de plantas"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["plantas", "fotosíntesis", "ciencia", "naturaleza", "ecología"]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "expl-003",
+  "titulo": "Mi cuerpo se mueve",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "informativo",
+  "palabras": 72,
+  "imagen": "cuerpo-humano.svg",
+  "texto": "Tu cuerpo puede hacer muchas cosas. Podés correr, saltar, dibujar y reír. ¿Sabías que adentro de tu cuerpo hay huesos? Los huesos son duros y sostienen tu cuerpo. También hay músculos. Los músculos te ayudan a moverte. Cuando querés levantar un brazo, tu cerebro le envía un mensaje a los músculos del brazo y ellos se mueven. Tu corazón también es un músculo. Late todo el día sin parar para que la sangre llegue a todo tu cuerpo.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Tu cuerpo puede hacer muchas cosas. Podés correr, saltar, dibujar y reír. ¿Sabías que adentro de tu cuerpo hay huesos? Los huesos son duros y sostienen tu cuerpo.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Ah, los huesos son como la estructura de una casa, pero dentro de nuestro cuerpo. Sin ellos, nuestro cuerpo no se podría parar."
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "También hay músculos. Los músculos te ayudan a moverte. Cuando querés levantar un brazo, tu cerebro le envía un mensaje a los músculos del brazo y ellos se mueven.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué parte del cuerpo creés que envía el mensaje para moverte?",
+        "opciones": ["El corazón", "El cerebro", "Los huesos", "La sangre"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Tu corazón también es un músculo. Late todo el día sin parar para que la sangre llegue a todo tu cuerpo.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué hacen los huesos en tu cuerpo?",
+      "opciones": ["Mueven los brazos", "Sostienen el cuerpo", "Envían mensajes", "Hacen la sangre"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "literal",
+      "pregunta": "¿Qué es el corazón?",
+      "opciones": ["Un hueso", "Un músculo", "Un mensaje", "Un órgano que piensa"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el corazón late sin parar?",
+      "opciones": ["Porque tiene miedo de parar", "Para que la sangre llegue a todo el cuerpo", "Porque está haciendo ejercicio", "Para que podamos pensar"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De cómo funciona el cuerpo por dentro", "De cómo correr más rápido", "De la comida saludable"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["cuerpo humano", "ciencia", "salud"]
+  }
+}

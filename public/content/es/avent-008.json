@@ -1,0 +1,80 @@
+{
+  "id": "avent-008",
+  "titulo": "Cómo funciona el reciclaje",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 192,
+  "imagen": "reciclaje-contenedores.svg",
+  "texto": "El reciclaje es el proceso de convertir materiales usados en nuevos productos para evitar que terminen en la basura. Todo comienza en casa, cuando separamos los residuos. El papel y el cartón van en un contenedor. El vidrio, como botellas y frascos, va en otro. Los plásticos y metales tienen su propio contenedor. También están los residuos orgánicos, como cáscaras de frutas y restos de comida. Una vez separados, los camiones de reciclaje llevan cada material a una planta especial. Allí, el vidrio se tritura y se funde para hacer nuevas botellas. El papel se mezcla con agua hasta formar una pasta que se prensa y se seca para hacer hojas nuevas. Los plásticos se lavan, se derriten y se convierten en pellets, que son como bolitas de plástico que se usan para fabricar nuevos objetos. Reciclar es muy importante porque ahorramos energía, reducimos la contaminación y cuidamos los recursos del planeta. Por ejemplo, reciclar una lata de aluminio ahorra suficiente energía para mantener un televisor encendido durante tres horas.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "El reciclaje es el proceso de convertir materiales usados en nuevos productos para evitar que terminen en la basura. Todo comienza en casa, cuando separamos los residuos. El papel y el cartón van en un contenedor. El vidrio, como botellas y frascos, va en otro. Los plásticos y metales tienen su propio contenedor.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "En tu casa, ¿separan los residuos para reciclar?",
+        "opciones": ["Sí, siempre separamos", "A veces", "No, todavía no lo hacemos"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "También están los residuos orgánicos, como cáscaras de frutas y restos de comida. Una vez separados, los camiones de reciclaje llevan cada material a una planta especial. Allí, el vidrio se tritura y se funde para hacer nuevas botellas.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'residuos orgánicos'?",
+        "opciones": ["Plásticos y vidrios", "Restos de comida y cáscaras de frutas", "Papeles y cartones", "Metales y latas"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "El papel se mezcla con agua hasta formar una pasta que se prensa y se seca para hacer hojas nuevas. Los plásticos se lavan, se derriten y se convierten en pellets, que son como bolitas de plástico que se usan para fabricar nuevos objetos.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Es interesante: las mismas botellas de plástico que usamos pueden convertirse en nuevos objetos. Todo es cuestión de separarlas bien."
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Reciclar es muy importante porque ahorramos energía, reducimos la contaminación y cuidamos los recursos del planeta. Por ejemplo, reciclar una lata de aluminio ahorra suficiente energía para mantener un televisor encendido durante tres horas.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué se hace con el vidrio en la planta de reciclaje?",
+      "opciones": ["Se lava y se guarda", "Se tritura y se funde para hacer nuevas botellas", "Se mezcla con agua", "Se convierte en pellets"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué es importante reciclar?",
+      "opciones": ["Porque es divertido", "Porque ahorramos energía y cuidamos el planeta", "Porque nos pagan por hacerlo", "Porque ocupa menos espacio"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "literal",
+      "pregunta": "¿En qué se convierten los plásticos reciclados?",
+      "opciones": ["En pasta de papel", "En pellets o bolitas de plástico", "En vidrio nuevo", "En abono orgánico"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De cómo se fabrican los plásticos", "De cómo funciona el reciclaje", "De la contaminación del agua"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["reciclaje", "medio ambiente", "ciencia", "sustentabilidad"]
+  }
+}

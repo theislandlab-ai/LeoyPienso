@@ -1,0 +1,80 @@
+{
+  "id": "avent-001",
+  "titulo": "El misterio del libro vacío",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "narrativo",
+  "palabras": 205,
+  "imagen": "libro-vacio.svg",
+  "texto": "Lucas encontró un libro viejo en la biblioteca de su escuela. Tenía la tapa de cuero marrón y un título que decía: «El secreto de la montaña». Pero cuando lo abrió, todas las páginas estaban en blanco. —¿Un libro vacío? —dijo extrañado. Se lo mostró a su amiga Martina. —Tal vez hay que escribir la historia —dijo ella. Lucas consiguió un lápiz y escribió la primera frase: «Había una vez un niño que encontró un mapa misterioso». Apenas terminó de escribir, las letras comenzaron a brillar con un tenue resplandor dorado. Martina y Lucas se miraron asombrados. Entonces Lucas escribió otra frase: «El mapa llevaba a un tesoro escondido en una cueva». El resplandor se hizo más fuerte. De repente, sintieron una ráfaga de viento que venía del libro. Las páginas pasaron solas hasta que el viento se detuvo. Sobre la mesa había un mapa de papel amarillo con una cruz roja. —Tenemos que ir a la montaña —dijo Lucas con emoción.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Lucas encontró un libro viejo en la biblioteca de su escuela. Tenía la tapa de cuero marrón y un título que decía: «El secreto de la montaña». Pero cuando lo abrió, todas las páginas estaban en blanco.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Por qué creés que un libro con título tiene las páginas en blanco?",
+        "opciones": ["Porque está sin terminar de imprimir", "Porque es un libro mágico", "Porque alguien borró todo"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "—¿Un libro vacío? —dijo extrañado. Se lo mostró a su amiga Martina. —Tal vez hay que escribir la historia —dijo ella. Lucas consiguió un lápiz y escribió la primera frase: «Había una vez un niño que encontró un mapa misterioso».",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "Qué interesante... el libro se llena cuando escribís en él. Es como si el lector también fuera el autor de la historia."
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Apenas terminó de escribir, las letras comenzaron a brillar con un tenue resplandor dorado. Martina y Lucas se miraron asombrados. Entonces Lucas escribió otra frase: «El mapa llevaba a un tesoro escondido en una cueva». El resplandor se hizo más fuerte.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'resplandor'?",
+        "opciones": ["Un sonido fuerte", "Una luz brillante", "Un olor agradable", "Un movimiento rápido"]
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "De repente, sintieron una ráfaga de viento que venía del libro. Las páginas pasaron solas hasta que el viento se detuvo. Sobre la mesa había un mapa de papel amarillo con una cruz roja. —Tenemos que ir a la montaña —dijo Lucas con emoción.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo la historia?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Qué encontró Lucas en la biblioteca?",
+      "opciones": ["Un mapa", "Un libro viejo con páginas en blanco", "Un lápiz mágico", "Una carta secreta"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué el libro comienza a brillar cuando Lucas escribe?",
+      "opciones": ["Porque el lápiz era mágico", "Porque el libro cobra vida con lo que se escribe", "Porque había un foco cerca", "Porque Martina tenía un truco"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "En la historia, ¿qué significa 'extrañado'?",
+      "opciones": ["Enojado", "Confundido o sorprendido", "Contento", "Aburrido"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar esta historia?",
+    "opciones": ["De un libro mágico que cobra vida", "De una biblioteca embrujada", "De un niño que odia leer"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["misterio", "aventura", "magia", "libros", "imaginación"]
+  }
+}

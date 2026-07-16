@@ -1,0 +1,72 @@
+{
+  "id": "avent-004",
+  "titulo": "Los planetas del sistema solar",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 203,
+  "imagen": "sistema-solar.svg",
+  "texto": "Nuestro sistema solar tiene ocho planetas que giran alrededor del Sol. El más cercano al Sol es Mercurio. Es muy pequeño y su superficie está llena de cráteres. Después viene Venus, que es el planeta más caliente porque tiene una atmósfera muy densa. La Tierra es el tercer planeta y es donde vivimos. Es el único planeta que conocemos con agua líquida y vida. Marte es el cuarto y se llama el planeta rojo por su color. Tiene el volcán más grande del sistema solar, el Monte Olimpo. Júpiter es el planeta más grande de todos. Tiene una tormenta gigante llamada la Gran Mancha Roja. Saturno es famoso por sus anillos hechos de hielo y rocas. Urano gira de costado y es de color azul verdoso. Neptuno es el más lejano y el más ventoso. Los ocho planetas son muy diferentes entre sí. Mercurio es pequeño y caliente, Júpiter es enorme y Neptuno está muy lejos. Todos son fascinantes.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Nuestro sistema solar tiene ocho planetas que giran alrededor del Sol. El más cercano al Sol es Mercurio. Es muy pequeño y su superficie está llena de cráteres. Después viene Venus, que es el planeta más caliente porque tiene una atmósfera muy densa.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué son los 'cráteres'?",
+        "opciones": ["Montañas altas", "Hoyos que se forman por impactos", "Ríos de lava", "Nubes de polvo"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "La Tierra es el tercer planeta y es donde vivimos. Es el único planeta que conocemos con agua líquida y vida. Marte es el cuarto y se llama el planeta rojo por su color. Tiene el volcán más grande del sistema solar, el Monte Olimpo.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Por qué creés que la Tierra es el único planeta con vida que conocemos?",
+        "opciones": ["Porque tiene agua líquida", "Porque está más cerca del Sol", "Porque es el más grande"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Júpiter es el planeta más grande de todos. Tiene una tormenta gigante llamada la Gran Mancha Roja. Saturno es famoso por sus anillos hechos de hielo y rocas. Urano gira de costado y es de color azul verdoso. Neptuno es el más lejano y el más ventoso.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cuál es el planeta más grande del sistema solar?",
+      "opciones": ["Saturno", "Júpiter", "Neptuno", "La Tierra"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué Venus es el planeta más caliente si Mercurio está más cerca del Sol?",
+      "opciones": ["Porque está más cerca del Sol", "Porque tiene una atmósfera muy densa que atrapa el calor", "Porque es más grande", "Porque tiene volcanes"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "literal",
+      "pregunta": "¿Cómo se llama el volcán más grande del sistema solar?",
+      "opciones": ["Monte Everest", "Monte Olimpo", "Gran Mancha Roja", "Monte Vesubio"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De las estrellas y galaxias", "De los planetas del sistema solar", "De cómo llegar a la Luna"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["planetas", "sistema solar", "ciencia", "astronomía"]
+  }
+}

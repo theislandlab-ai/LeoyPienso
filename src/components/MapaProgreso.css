@@ -1,0 +1,134 @@
+.mapa {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-top: 0.5rem;
+}
+
+.mapa-titulo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.mapa-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.mapa-resumen {
+  display: flex;
+  gap: 1rem;
+}
+
+.resumen-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 1rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 2px solid var(--color-border);
+}
+
+.resumen-numero {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.resumen-label {
+  font-size: 0.8rem;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.mapa-niveles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mapa-nivel h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.mapa-progreso-bar {
+  height: 12px;
+  background: var(--color-border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.mapa-progreso-llena {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
+.mapa-progreso-llena.expl {
+  background: var(--color-exploradores);
+}
+
+.mapa-progreso-llena.avent {
+  background: var(--color-aventureros);
+}
+
+.mapa-progreso-texto {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  font-weight: 600;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.mapa-estrategias h3 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.mapa-estrategias-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.estrategia-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  position: relative;
+}
+
+.estrategia-card.desbloqueada {
+  border-color: var(--color-green);
+  background: #ECFDF5;
+}
+
+.estrategia-card.bloqueada {
+  opacity: 0.5;
+}
+
+.estrategia-emoji {
+  font-size: 1.3rem;
+}
+
+.estrategia-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.estrategia-lock {
+  margin-left: auto;
+  font-size: 0.9rem;
+}

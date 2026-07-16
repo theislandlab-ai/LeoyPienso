@@ -1,0 +1,58 @@
+.resultados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.resultados-titulo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.resultados-puntaje {
+  display: flex;
+  justify-content: center;
+}
+
+.puntaje-circular {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.resultados-detalle {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 1rem;
+  border: 2px solid var(--color-border);
+}
+
+.detalle-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.detalle-label {
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.detalle-valor {
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.resultados-acciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+}

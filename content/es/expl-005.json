@@ -1,0 +1,72 @@
+{
+  "id": "expl-005",
+  "titulo": "Las estaciones del año",
+  "nivel": "exploradores",
+  "edad_recomendada": "6-8",
+  "genero": "informativo",
+  "palabras": 92,
+  "imagen": "estaciones-ano.svg",
+  "texto": "El año tiene cuatro estaciones: primavera, verano, otoño e invierno. En primavera nacen las flores y hace un clima templado. Es cuando los árboles se llenan de hojas verdes. En verano hace mucho calor. Podemos ir a la playa, comer helado y jugar al aire libre. En otoño las hojas de los árboles se vuelven amarillas y naranjas, y caen al suelo. Hace un poco de frío. En invierno hace mucho frío. A veces nieva. Usamos abrigo, bufanda y guantes para mantenernos calientes. Cada estación dura tres meses y tiene cosas especiales para disfrutar.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "El año tiene cuatro estaciones: primavera, verano, otoño e invierno. En primavera nacen las flores y hace un clima templado. Es cuando los árboles se llenan de hojas verdes.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Sabés qué quiere decir 'clima templado'?",
+        "opciones": ["Que hace mucho calor", "Que no hace ni mucho frío ni mucho calor", "Que hace mucho frío", "Que siempre llueve"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "En verano hace mucho calor. Podemos ir a la playa, comer helado y jugar al aire libre. En otoño las hojas de los árboles se vuelven amarillas y naranjas, y caen al suelo. Hace un poco de frío.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Cuál es tu estación favorita y por qué?",
+        "opciones": ["Primavera porque nacen las flores", "Verano porque puedo ir a la playa", "Invierno porque me gusta el frío"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "En invierno hace mucho frío. A veces nieva. Usamos abrigo, bufanda y guantes para mantenernos calientes. Cada estación dura tres meses y tiene cosas especiales para disfrutar.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cuántas estaciones tiene el año?",
+      "opciones": ["Dos", "Tres", "Cuatro", "Cinco"],
+      "respuesta_correcta": 2
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿En qué estación es más probable que necesites un abrigo?",
+      "opciones": ["En primavera", "En verano", "En otoño", "En invierno"],
+      "respuesta_correcta": 3
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Qué quiere decir 'al aire libre'?",
+      "opciones": ["Adentro de una casa", "Afuera, en la naturaleza", "En un lugar cerrado", "Debajo del agua"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De las partes del día", "De las cuatro estaciones del año", "Del clima en diferentes países"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["naturaleza", "estaciones", "ciencia", "clima"]
+  }
+}

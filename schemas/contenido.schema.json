@@ -1,0 +1,125 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://leo-y-pienso.app/schemas/contenido.schema.json",
+  "title": "Texto de lectura",
+  "description": "Formato para los textos nivelados de Leo y Pienso",
+  "type": "object",
+  "required": ["id", "titulo", "nivel", "texto", "segmentos", "preguntas"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Identificador único del texto (ej: expl-001)"
+    },
+    "titulo": {
+      "type": "string",
+      "description": "Título del texto visible para el niño"
+    },
+    "nivel": {
+      "type": "string",
+      "enum": ["exploradores", "aventureros"],
+      "description": "Nivel de dificultad"
+    },
+    "edad_recomendada": {
+      "type": "string",
+      "description": "Rango de edad (ej: 6-8, 8-10)"
+    },
+    "genero": {
+      "type": "string",
+      "enum": ["narrativo", "informativo", "poetico", "instructivo"],
+      "description": "Género textual"
+    },
+    "palabras": {
+      "type": "integer",
+      "description": "Cantidad de palabras del texto"
+    },
+    "imagen": {
+      "type": "string",
+      "description": "URL o ruta de la imagen asociada al texto"
+    },
+    "texto": {
+      "type": "string",
+      "description": "Texto completo (sin segmentar)"
+    },
+    "segmentos": {
+      "type": "array",
+      "description": "Segmentos del texto con pausas estratégicas",
+      "items": {
+        "type": "object",
+        "required": ["id", "contenido"],
+        "properties": {
+          "id": { "type": "integer" },
+          "contenido": { "type": "string" },
+          "pausa": {
+            "type": "object",
+            "properties": {
+              "tipo": {
+                "type": "string",
+                "enum": ["pensar_voz_alta", "preguntar", "semaforo", "vocabulario"]
+              },
+              "mensaje": { "type": "string" },
+              "opciones": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "preguntas": {
+      "type": "array",
+      "description": "Preguntas de comprensión",
+      "items": {
+        "type": "object",
+        "required": ["id", "tipo", "pregunta", "opciones", "respuesta_correcta"],
+        "properties": {
+          "id": { "type": "integer" },
+          "tipo": {
+            "type": "string",
+            "enum": ["literal", "inferencial", "vocabulario"],
+            "description": "Tipo de pregunta según la taxonomía de comprensión"
+          },
+          "pregunta": { "type": "string" },
+          "imagen": { "type": "string" },
+          "opciones": {
+            "type": "array",
+            "items": { "type": "string" },
+            "minItems": 2,
+            "maxItems": 4
+          },
+          "respuesta_correcta": {
+            "type": "integer",
+            "description": "Índice (0-based) de la opción correcta"
+          }
+        }
+      }
+    },
+    "prediccion": {
+      "type": "object",
+      "description": "Pregunta de predicción antes de leer",
+      "properties": {
+        "pregunta": { "type": "string" },
+        "opciones": {
+          "type": "array",
+          "items": { "type": "string" },
+          "minItems": 2,
+          "maxItems": 4
+        },
+        "respuesta_ejemplo": { "type": "string" }
+      }
+    },
+    "metadatos": {
+      "type": "object",
+      "properties": {
+        "autor": { "type": "string" },
+        "fuente": { "type": "string" },
+        "licencia": { "type": "string", "default": "CC BY-SA 4.0" },
+        "fecha_creacion": { "type": "string", "format": "date" },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    }
+  }
+}

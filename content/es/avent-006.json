@@ -1,0 +1,80 @@
+{
+  "id": "avent-006",
+  "titulo": "Qué son los volcanes",
+  "nivel": "aventureros",
+  "edad_recomendada": "8-10",
+  "genero": "informativo",
+  "palabras": 183,
+  "imagen": "volcan-erupcion.svg",
+  "texto": "Un volcán es una abertura en la superficie de la Tierra por donde sale magma, que es roca derretida del interior del planeta. Cuando el magma llega a la superficie se llama lava. La lava puede estar a más de mil grados de temperatura. Los volcanes pueden estar activos, dormidos o extintos. Un volcán activo puede hacer erupción en cualquier momento. Uno dormido hace mucho que no entra en erupción, pero podría despertarse. Uno extinto ya no hará erupción nunca más. Cuando un volcán entra en erupción, expulsa lava, cenizas y gases. La ceniza volcánica puede viajar miles de kilómetros y tapar el sol por días. Aunque parezcan peligrosos, los volcanes también son útiles. Las cenizas volcánicas fertilizan el suelo, por lo que la tierra cerca de los volcanes es muy fértil para la agricultura. Además, en algunos lugares usan el calor del interior de la Tierra para generar energía. Esto se llama energía geotérmica.",
+  "segmentos": [
+    {
+      "id": 1,
+      "contenido": "Un volcán es una abertura en la superficie de la Tierra por donde sale magma, que es roca derretida del interior del planeta. Cuando el magma llega a la superficie se llama lava. La lava puede estar a más de mil grados de temperatura.",
+      "pausa": {
+        "tipo": "vocabulario",
+        "mensaje": "¿Cuál es la diferencia entre 'magma' y 'lava'?",
+        "opciones": ["Son lo mismo", "Magma está dentro de la Tierra y lava en la superficie", "Magma es más caliente que la lava", "La lava es líquida y el magma es sólido"]
+      }
+    },
+    {
+      "id": 2,
+      "contenido": "Los volcanes pueden estar activos, dormidos o extintos. Un volcán activo puede hacer erupción en cualquier momento. Uno dormido hace mucho que no entra en erupción, pero podría despertarse. Uno extinto ya no hará erupción nunca más.",
+      "pausa": {
+        "tipo": "preguntar",
+        "mensaje": "¿Qué diferencia hay entre un volcán dormido y uno extinto?",
+        "opciones": ["Ninguna, son lo mismo", "El dormido podría despertar, el extinto no", "El extinto es más grande", "El dormido nunca hizo erupción"]
+      }
+    },
+    {
+      "id": 3,
+      "contenido": "Cuando un volcán entra en erupción, expulsa lava, cenizas y gases. La ceniza volcánica puede viajar miles de kilómetros y tapar el sol por días.",
+      "pausa": {
+        "tipo": "pensar_voz_alta",
+        "mensaje": "La ceniza de un volcán puede viajar muy lejos. Me imagino que debe ser impresionante ver una erupción desde lejos."
+      }
+    },
+    {
+      "id": 4,
+      "contenido": "Aunque parezcan peligrosos, los volcanes también son útiles. Las cenizas volcánicas fertilizan el suelo, por lo que la tierra cerca de los volcanes es muy fértil para la agricultura. Además, en algunos lugares usan el calor del interior de la Tierra para generar energía.",
+      "pausa": {
+        "tipo": "semaforo",
+        "mensaje": "¿Cómo vas entendiendo esta información?"
+      }
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "tipo": "literal",
+      "pregunta": "¿Cómo se llama la roca derretida cuando está dentro de la Tierra?",
+      "opciones": ["Lava", "Magma", "Ceniza", "Roca ígnea"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 2,
+      "tipo": "inferencial",
+      "pregunta": "¿Por qué la tierra cerca de los volcanes suele ser fértil?",
+      "opciones": ["Porque el calor mata las plagas", "Porque las cenizas volcánicas fertilizan el suelo", "Porque la lava tiene nutrientes", "Porque llueve más en esas zonas"],
+      "respuesta_correcta": 1
+    },
+    {
+      "id": 3,
+      "tipo": "vocabulario",
+      "pregunta": "¿Qué quiere decir que un volcán está 'extinto'?",
+      "opciones": ["Que está haciendo erupción", "Que nunca hará erupción otra vez", "Que está dormido", "Que es muy antiguo"],
+      "respuesta_correcta": 1
+    }
+  ],
+  "prediccion": {
+    "pregunta": "¿De qué creés que va a tratar este texto?",
+    "opciones": ["De los terremotos", "De qué son y cómo funcionan los volcanes", "De las montañas más altas del mundo"]
+  },
+  "metadatos": {
+    "autor": "Equipo Leo y Pienso",
+    "fuente": "Texto original",
+    "licencia": "CC BY-SA 4.0",
+    "fecha_creacion": "2024-01-15",
+    "tags": ["volcanes", "naturaleza", "ciencia", "geología", "tierra"]
+  }
+}

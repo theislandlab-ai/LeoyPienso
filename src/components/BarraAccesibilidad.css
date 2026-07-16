@@ -1,0 +1,42 @@
+.barra-accesibilidad {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  flex-wrap: wrap;
+}
+
+.accesibilidad-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-text-light);
+  font-size: 0.8rem;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.accesibilidad-btn:hover {
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.accesibilidad-btn.activo {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.btn-icon {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.btn-label {
+  font-size: 0.75rem;
+}

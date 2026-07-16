@@ -1,0 +1,104 @@
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding-top: 1rem;
+}
+
+.inicio-header {
+  text-align: center;
+}
+
+.inicio-titulo {
+  font-size: 2rem;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.inicio-subtitulo {
+  color: var(--color-text-light);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.inicio-niveles {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+.nivel-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow);
+  transition: all 0.2s;
+  text-align: left;
+  width: 100%;
+}
+
+.nivel-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.nivel-exploradores:hover,
+.nivel-exploradores:focus-visible {
+  border-color: var(--color-exploradores);
+}
+
+.nivel-aventureros:hover,
+.nivel-aventureros:focus-visible {
+  border-color: var(--color-aventureros);
+}
+
+.nivel-icono {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.nivel-info h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.nivel-info p {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.nivel-progreso {
+  font-size: 0.75rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.btn-secundario {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid var(--color-primary);
+  transition: all 0.2s;
+  text-align: center;
+}
+
+.btn-secundario:hover {
+  background: var(--color-primary);
+  color: white;
+}

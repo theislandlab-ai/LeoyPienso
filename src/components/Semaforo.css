@@ -1,0 +1,81 @@
+.semaforo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  border: 2px solid var(--color-border);
+  box-shadow: var(--shadow);
+}
+
+.semaforo-mensaje {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.semaforo-opciones {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.semaforo-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius);
+  border: 2px solid transparent;
+  background: var(--color-bg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.semaforo-btn:hover {
+  transform: translateY(-2px);
+}
+
+.semaforo-btn.verde.activo {
+  border-color: var(--color-green);
+  background: #ECFDF5;
+}
+
+.semaforo-btn.amarillo.activo {
+  border-color: var(--color-yellow);
+  background: #FFFBEB;
+}
+
+.semaforo-btn.rojo.activo {
+  border-color: var(--color-red);
+  background: #FEF2F2;
+}
+
+.semaforo-emoji {
+  font-size: 1.5rem;
+}
+
+.btn-chico {
+  padding: 0.5rem 1.5rem;
+  border-radius: var(--radius);
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.btn-chico:hover:not(:disabled) {
+  background: var(--color-primary-light);
+}
+
+.btn-chico:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
