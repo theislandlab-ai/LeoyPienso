@@ -5,7 +5,7 @@ import i18n from '../i18n/es'
 import './PantallaResultados.css'
 
 export default function PantallaResultados() {
-  const { texto, puntaje, estimacion, irAReflexion, irAMapa, estrategias } = useSesion()
+  const { texto, respuestas, puntaje, estimacion, irAReflexion, irAMapa, estrategias, semaforoRespuestas } = useSesion()
   const { registrarLectura } = useProgreso()
 
   const totalPreguntas = texto?.preguntas?.length || 1
@@ -15,12 +15,42 @@ export default function PantallaResultados() {
 
   const estimacionMap = { bien: '😊 Bien', regular: '😐 Regular', mal: '😔 Mal' }
 
-  const mensajeCompanero = bien
-    ? '¡Muy bien! Se nota que leíste con atención.'
-    : regular
-    ? 'Bien, pero podemos seguir practicando.'
-    : 'No te preocupes. Cada vez que leemos, aprendemos algo nuevo.'
+  // Obtener nombre del niño y evaluar feedback pedagógico
+  const nombreChild = localStorage.getItem('isla-child-name') || 'amiguito'
+  const tuvoDudas = semaforoRespuestas.includes('amarillo') || semaforoRespuestas.includes('rojo')
 
+  const preguntasErradas = texto?.preguntas?.filter((pregunta) => {
+    const respChild = respuestas.find(r => r.preguntaId === pregunta.id)
+    return !respChild || respChild.respuesta !== pregunta.respuesta_correcta
+  }) || []
+
+  const falloLiteral = preguntasErradas.some(p => p.tipo === 'literal')
+  const falloInferencial = preguntasErradas.some(p => p.tipo === 'inferencial')
+  const falloVocabulario = preguntasErradas.some(p => p.tipo === 'vocabulario')
+
+  let baseMsg = ""
+  if (bien) {
+    baseMsg = `¡Qué gran lectura, ${nombreChild}! Leíste con súper atención.`
+  } else if (regular) {
+    baseMsg = `¡Buen intento, ${nombreChild}! Tu cerebro está creciendo.`
+  } else {
+    baseMsg = `No te preocupes, ${nombreChild}. ¡El camino del lector se hace paso a paso!`
+  }
+
+  let tipMsg = ""
+  if (tuvoDudas) {
+    tipMsg = " Vi que tuviste dudas al leer (marcaste amarillo/rojo en el semáforo). ¡Darte cuenta es genial! Recordá Releer 📖 ese pedacito la próxima vez."
+  } else if (falloVocabulario) {
+    tipMsg = " Si encontrás palabras difíciles, intentá leer las oraciones de antes y después ➡️ para adivinar qué significa por el contexto."
+  } else if (falloInferencial) {
+    tipMsg = " Para responder preguntas que no están escritas en el texto, usá pistas del cuento y conéctalas con lo que ya sabés 🧠."
+  } else if (falloLiteral) {
+    tipMsg = " Si te olvidás de algún detalle, recordá que siempre podés volver atrás y buscar el dato en la lectura 📖."
+  } else {
+    tipMsg = " ¡Seguí usando tus herramientas de súper lector para explorar nuevos mundos!"
+  }
+
+  const mensajeCompanero = baseMsg + " " + tipMsg
   const expresionCompanero = bien ? 'feliz' : regular ? 'pensativo' : 'preocupado'
 
   function handleVerMapa() {

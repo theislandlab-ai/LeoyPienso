@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/opendyslexic@1.0.3/dist/woff2/OpenDyslexic-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'OpenDyslexic';
+  src: url('https://cdn.jsdelivr.net/npm/opendyslexic@1.0.3/dist/woff2/OpenDyslexic-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root {
   --color-primary: #4F46E5;
   --color-primary-light: #818CF8;
@@ -58,20 +71,67 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-.letra-grande {
-  font-size: 1.25rem;
+html.letra-grande {
+  font-size: 20px !important;
 }
 
-.alto-contraste {
+body.letra-imprenta,
+body.letra-imprenta button,
+body.letra-imprenta input,
+body.letra-imprenta p,
+body.letra-imprenta h1,
+body.letra-imprenta h2,
+body.letra-imprenta span,
+body.letra-imprenta div:not(.mascot-container):not(.speech-bubble-container):not(.magic-pencil):not(.blue-bow) {
+  text-transform: uppercase !important;
+}
+
+body.alto-contraste {
   --color-bg: #000000;
-  --color-surface: #1F2937;
-  --color-text: #FFFFFF;
-  --color-text-light: #D1D5DB;
-  --color-border: #4B5563;
+  --color-surface: #1e293b;
+  --color-text: #ffffff;
+  --color-text-light: #f1f5f9;
+  --color-border: #ffffff;
+}
+
+body.alto-contraste .nivel-card,
+body.alto-contraste .customizer-card,
+body.alto-contraste .speech-bubble,
+body.alto-contraste .nombre-modal-content,
+body.alto-contraste .resumen-card,
+body.alto-contraste .mapa-vacio,
+body.alto-contraste .caja-herramientas,
+body.alto-contraste .barra-accesibilidad {
+  background: #000000 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+  box-shadow: none !important;
+}
+
+body.alto-contraste .nivel-info p,
+body.alto-contraste .nivel-progreso,
+body.alto-contraste .control-label,
+body.alto-contraste .brand-subtitle,
+body.alto-contraste .speech-bubble,
+body.alto-contraste .resumen-label,
+body.alto-contraste .btn-label {
+  color: #ffffff !important;
+}
+
+body.alto-contraste button:not(.btn-secundario) {
+  background: #111827 !important;
+  color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+}
+
+body.alto-contraste button.btn-secundario {
+  background: #fbbf24 !important;
+  color: #000000 !important;
+  border: 2px solid #ffffff !important;
 }
 
 .fuente-dislexia {
-  font-family: var(--font-dislexia);
+  font-family: var(--font-dislexia) !important;
 }
 
 @keyframes fadeIn {

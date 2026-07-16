@@ -189,3 +189,115 @@
     max-width: 420px;
   }
 }
+
+/* Botón para editar el nombre del niño */
+.btn-editar-nombre {
+  background: transparent;
+  border: none;
+  font-size: 0.95rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  padding: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-editar-nombre:hover {
+  transform: scale(1.2) rotate(15deg);
+}
+
+/* Modal para ingresar el nombre del niño */
+.nombre-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.nombre-modal-content {
+  background: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 32px;
+  border: 4px solid #6366f1;
+  padding: 2.2rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.nombre-modal-title {
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.8rem;
+  color: #6366f1;
+  font-weight: 800;
+}
+
+.nombre-modal-desc {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-light, #6b7280);
+  line-height: 1.4;
+}
+
+.nombre-input {
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  border-radius: 20px;
+  border: 3px solid #cbd5e1;
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-align: center;
+}
+
+.nombre-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+.btn-guardar-nombre {
+  width: 100%;
+  padding: 0.9rem;
+  border-radius: 20px;
+  font-family: 'Fredoka', cursive, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  background: #6366f1;
+  color: #ffffff;
+  border: none;
+  box-shadow: 0 5px 0px #4f46e5;
+  transition: all 0.15s;
+}
+
+.btn-guardar-nombre:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 0px #4f46e5;
+}
+
+.btn-guardar-nombre:active:not(:disabled) {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0px #4f46e5;
+}
+
+.btn-guardar-nombre:disabled {
+  background: #cbd5e1;
+  box-shadow: 0 5px 0px #94a3b8;
+  color: #94a3b8;
+  cursor: not-allowed;
+}

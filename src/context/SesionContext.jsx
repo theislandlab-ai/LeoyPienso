@@ -24,6 +24,7 @@ export function SesionProvider({ children }) {
   const [estimacion, setEstimacion] = useState(null)
   const [puntaje, setPuntaje] = useState(null)
   const [estrategias, setEstrategias] = useState([])
+  const [semaforoRespuestas, setSemaforoRespuestas] = useState([])
 
   const iniciarSesion = useCallback((nivelSeleccionado, textoSeleccionado) => {
     setNivel(nivelSeleccionado)
@@ -34,6 +35,7 @@ export function SesionProvider({ children }) {
     setEstimacion(null)
     setPuntaje(null)
     setEstrategias([])
+    setSemaforoRespuestas([])
     setPantalla(PANTALLAS.PREDICCION)
   }, [])
 
@@ -52,7 +54,10 @@ export function SesionProvider({ children }) {
     setEnPausa(true)
   }, [])
 
-  const responderPausa = useCallback(() => {
+  const responderPausa = useCallback((respuesta) => {
+    if (respuesta && typeof respuesta === 'string') {
+      setSemaforoRespuestas(prev => [...prev, respuesta])
+    }
     setEnPausa(false)
     avanzarSegmento()
   }, [avanzarSegmento])
@@ -106,6 +111,7 @@ export function SesionProvider({ children }) {
     setEstimacion(null)
     setPuntaje(null)
     setEstrategias([])
+    setSemaforoRespuestas([])
   }, [])
 
   const irALectura = useCallback(() => {
@@ -128,6 +134,7 @@ export function SesionProvider({ children }) {
         estimacion,
         puntaje,
         estrategias,
+        semaforoRespuestas,
         PANTALLAS,
         iniciarSesion,
         avanzarSegmento,

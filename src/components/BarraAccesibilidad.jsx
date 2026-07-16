@@ -6,18 +6,27 @@ export default function BarraAccesibilidad() {
   const [dislexia, setDislexia] = useState(false)
   const [letraGrande, setLetraGrande] = useState(false)
   const [altoContraste, setAltoContraste] = useState(false)
+  const [imprenta, setImprenta] = useState(false)
 
+  // Aplicar fuente de dislexia
   useEffect(() => {
     document.body.classList.toggle('fuente-dislexia', dislexia)
   }, [dislexia])
 
+  // Aplicar letra grande al elemento html raíz para escalar las unidades rem
   useEffect(() => {
-    document.body.classList.toggle('letra-grande', letraGrande)
+    document.documentElement.classList.toggle('letra-grande', letraGrande)
   }, [letraGrande])
 
+  // Aplicar alto contraste
   useEffect(() => {
     document.body.classList.toggle('alto-contraste', altoContraste)
   }, [altoContraste])
+
+  // Aplicar letra imprenta (mayúscula)
+  useEffect(() => {
+    document.body.classList.toggle('letra-imprenta', imprenta)
+  }, [imprenta])
 
   return (
     <nav className="barra-accesibilidad" aria-label="Opciones de accesibilidad">
@@ -38,6 +47,15 @@ export default function BarraAccesibilidad() {
       >
         <span className="btn-icon">Aa</span>
         <span className="btn-label">{i18n.accesibilidad.letra_grande}</span>
+      </button>
+      <button
+        className={`accesibilidad-btn ${imprenta ? 'activo' : ''}`}
+        onClick={() => setImprenta(prev => !prev)}
+        title="Letra Imprenta Mayúscula"
+        aria-pressed={imprenta}
+      >
+        <span className="btn-icon">🔠</span>
+        <span className="btn-label">Imprenta</span>
       </button>
       <button
         className={`accesibilidad-btn ${altoContraste ? 'activo' : ''}`}

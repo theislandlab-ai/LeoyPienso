@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useSesion } from '../context/SesionContext'
 import Compannero from './Compannero'
 import { useProgreso } from '../hooks/useProgreso'
@@ -8,16 +9,44 @@ export default function PantallaInicio() {
   const { irASeleccion, setNivel, irAMapa } = useSesion()
   const { contarNivel } = useProgreso()
 
+  // --- ESTADO DEL NOMBRE DEL NIÑO ---
+  const [nombreChild, setNombreChild] = useState(() => localStorage.getItem('isla-child-name') || '')
+  const [mostrarModal, setMostrarModal] = useState(() => !localStorage.getItem('isla-child-name'))
+  const [nombreInput, setNombreInput] = useState('')
+
   function elegirNivel(nivel) {
     setNivel(nivel)
     irASeleccion()
+  }
+
+  const guardarNombre = () => {
+    if (!nombreInput.trim()) return
+    const finalName = nombreInput.trim()
+    localStorage.setItem('isla-child-name', finalName)
+    setNombreChild(finalName)
+    setMostrarModal(false)
   }
 
   return (
     <div className="inicio animar-slide">
       <div className="inicio-header">
         <h1 className="inicio-titulo">{i18n.app.title}</h1>
-        <p className="inicio-subtitulo">{i18n.app.subtitle}</p>
+        <p className="inicio-subtitulo">
+          {nombreChild ? `¡Hola, ${nombreChild}! ` : ''}
+          {i18n.app.subtitle}
+          {nombreChild && (
+            <button 
+              className="btn-editar-nombre" 
+              onClick={() => {
+                setNombreInput(nombreChild)
+                setMostrarModal(true)
+              }}
+              title="Cambiar de nombre"
+            >
+              ✏️
+            </button>
+          )}
+        </p>
       </div>
 
       <div className="inicio-grid">
@@ -65,6 +94,34 @@ export default function PantallaInicio() {
           </button>
         </div>
       </div>
+
+      {mostrarModal && (
+        <div className="nombre-modal-overlay">
+          <div className="nombre-modal-content animar-entrada">
+            <h2 className="nombre-modal-title">¡Hola! Soy ISLA 💫</h2>
+            <p className="nombre-modal-desc">¿Cómo te llamás? Escribí tu nombre para empezar nuestra aventura de lectura.</p>
+            <input 
+              type="text" 
+              className="nombre-input" 
+              value={nombreInput}
+              onChange={(e) => setNombreInput(e.target.value)}
+              placeholder="Escribí tu nombre..."
+              maxLength={20}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') guardarNombre()
+              }}
+              autoFocus
+            />
+            <button 
+              className="btn-primario btn-guardar-nombre" 
+              onClick={guardarNombre}
+              disabled={!nombreInput.trim()}
+            >
+              ¡Listo!
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

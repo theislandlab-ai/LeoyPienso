@@ -3,6 +3,8 @@ import Compannero from './Compannero'
 import i18n from '../i18n/es'
 import './PantallaReflexion.css'
 
+import { useProgreso } from '../hooks/useProgreso'
+
 const OPCIONES = [
   { id: 'releer', emoji: '📖', label: i18n.reflexion.opciones.releer },
   { id: 'seguir', emoji: '➡️', label: i18n.reflexion.opciones.seguir },
@@ -11,10 +13,14 @@ const OPCIONES = [
 ]
 
 export default function PantallaReflexion() {
-  const { estrategias, registrarEstrategia, irAMapa, irAInicio } = useSesion()
+  const { texto, puntaje, estimacion, estrategias, registrarEstrategia, irAMapa, irAInicio } = useSesion()
+  const { registrarLectura } = useProgreso()
 
   function agregarEstrategia(id) {
+    if (estrategias.includes(id)) return
+    const updated = [...estrategias, id]
     registrarEstrategia(id)
+    registrarLectura(texto?.id, puntaje, estimacion, updated)
   }
 
   return (
